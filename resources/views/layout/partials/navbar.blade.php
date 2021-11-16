@@ -1,7 +1,7 @@
 <link href="{{asset('css/navbar.css')}}" rel="stylesheet">
 
-<div class="logobar">
-    <a href="#"><img id="navimg" src="img/Logotipo_Final.png"></a>
+<div class="logobar @if ($menuOption=='E') active @endif">
+    <a href="{{route('gm.Home')}}"><img id="navimg" src="img/Logotipo_Final.png"></a>
 </div>
 
 <nav>

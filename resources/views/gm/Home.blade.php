@@ -1,14 +1,6 @@
-@extends("layout.master")
+@extends('master')
 
-@section("title")
-    Home
-@endsection
-
-@section("estilos")
-<link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
-@endsection
-
-@section("content")
+@section ('content')
 <div class="position-relative" >
 <img id="banner" src="../fotos/Banner.png" alt="">
 
@@ -79,6 +71,5 @@
 
 <div class="vazio"></div>
 
-<div style=" height :2000px;">
-</div>
+<div style=" height :2000px;"></div>
 @endsection

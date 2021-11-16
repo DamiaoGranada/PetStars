@@ -6,6 +6,7 @@
 <body>
 <link rel="stylesheet" type="text/css" href="{{asset('css/apoios.css')}}">    
 
+
 <h1>Patrocinadores</h1>
 
 <div class="vazio"></div>
@@ -102,5 +103,6 @@
             </div>
         </div>
     </div>
+    
 </body>
 @endsection

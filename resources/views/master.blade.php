@@ -15,11 +15,13 @@
 
             <title>
             @yield('title')
+            Home
             </title>
     </head>
 
 <!--NAVBAR-->
 <body>
+<link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
 
 @include('layout.partials.navbar')
 
@@ -31,7 +33,8 @@
 
 @yield('content')
 
-<div class="vazio"></div>
+
+
 
 <!-- Footer-->
 @include('layout.partials.footer')

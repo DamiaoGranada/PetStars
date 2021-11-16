@@ -10,6 +10,10 @@ class PageController extends Controller
         return view ('master')->with('menuOption', 'I');
     }
 
+    public function Home(){
+        return view ('gm.Home')->with('menuOption', 'E');
+    }
+
     public function apoios(){
         return view('gm.apoios')->with('menuOption', 'C');
     }
