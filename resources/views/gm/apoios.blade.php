@@ -16,7 +16,6 @@
     <div class="row">
             <div class="col-md-4">
                 <div class="cartao">
-                    aaa
                     <div class="imgpatro_arcana">
                         <img src="fotos/acana.png" alt="Patrocinio">
                     </div>
@@ -104,6 +103,7 @@
             </div>
         </div>
     </div>
+    <div class="vazio"></div>
     
 </body>
 @endsection
