@@ -10,11 +10,16 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/adocao.css')}}">    
 
 
-    <div id="banner" class="banner"></div>
+
+<div class="position-relative" >
+<img id="banner" src="fotos/fotocapa.jpg" alt="">
+
+<h1 id="title" class=" position-absolute rounded-pill" > ADOÇÃO DE ANIMAIS </h1>
+</div>
 
     
 
-<h1>Adoção de Animais</h1>
+
 
 <div class="vazio"></div>
 
