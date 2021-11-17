@@ -29,8 +29,6 @@
 
 
 
-<div class="vazio"></div>
-
 @yield('content')
 
 

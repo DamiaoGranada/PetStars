@@ -17,11 +17,11 @@
 
 <div class="vazio"></div>
 
- <div class="container-fluid">
+ <div class=" container-fluid">
 
-    <div id class="row">
+    <div class="row">
       
-        <div class=" col-4 text-center">
+        <div class="  col-12 col-md-4 text-center">
 
         <img  class="imagens rounded-circle align-middle" src="fotos/cat.jpg" alt="">
 
@@ -33,19 +33,20 @@
 
         </div>
 
-        <div class="col-4 text-center">
+        <div class="  col-12 col-md-4 text-center">
 
         <img  class="imagens rounded-circle align-middle" src="fotos/cao.jpg" alt="">
         
         <p>ja foram adotados</p>
 
         <h3>24 Cães</h3>
+  
    
       
 
         </div>
 
-        <div class=" col-4 text-center">
+        <div class="  col-12 col-md-4 text-center">
 
         <img  class="imagens rounded-circle align-middle" src="fotos/bird.jpg" alt="">
         
@@ -61,13 +62,9 @@
 
  </div>
 
- <div class="vazio"></div>
-
-<div class="conteiner">
 
 <h2 id="title2"class="text-center">Eventos</h2>
 
-</div>
 
 <div class="vazio"></div>
 
