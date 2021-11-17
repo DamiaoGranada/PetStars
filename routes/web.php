@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +14,7 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', [PageController::class,'master'])->name('master');
-
-Route::get('/Home', [PageController::class,'Home'])->name('gm.Home');
+Route::get('/', [PageController::class,'Home'])->name('gm.Home');
 
 Route::get('/apoios', [PageController::class,'apoios'])->name('gm.apoios');
 
