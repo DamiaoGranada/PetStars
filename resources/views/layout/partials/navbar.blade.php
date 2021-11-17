@@ -9,7 +9,7 @@
         <div class="navesq @if ($menuOption=='I') active @endif">
         <li><a href="#"> PetStars </a></li>
         <li class="@if ($menuOption=='B') active @endif"><a href="{{route('gm.adocao')}}"> Adoção </a></li>
-        <li><a href=""> Faqs </a></li>
+        <li class="@if ($menuOption=='D') active @endif"><a href="{{route('gm.faq')}}"> Faqs </a></li>
         <li class="@if ($menuOption=='C') active @endif"><a href="{{route('gm.apoios')}}"> Apoios </a></li>
         <li><a href="#"> Loja </a></li>
         </div>

@@ -23,7 +23,7 @@
       
         <div class=" col-4 text-center">
 
-        <img  class="imagens rounded-circle align-middle" src="../fotos/cat.jpg" alt="">
+        <img  class="imagens rounded-circle align-middle" src="fotos/cat.jpg" alt="">
 
         <p>ja foram adotados</p>
 
@@ -35,7 +35,7 @@
 
         <div class="col-4 text-center">
 
-        <img  class="imagens rounded-circle align-middle" src="../fotos/cão.jpg" alt="">
+        <img  class="imagens rounded-circle align-middle" src="fotos/cao.jpg" alt="">
         
         <p>ja foram adotados</p>
 
@@ -47,7 +47,7 @@
 
         <div class=" col-4 text-center">
 
-        <img  class="imagens rounded-circle align-middle" src="../fotos/bird.jpg" alt="">
+        <img  class="imagens rounded-circle align-middle" src="fotos/bird.jpg" alt="">
         
         <p>ja foram adotados</p>
 

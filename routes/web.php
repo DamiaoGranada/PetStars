@@ -21,3 +21,5 @@ Route::get('/Home', [PageController::class,'Home'])->name('gm.Home');
 Route::get('/apoios', [PageController::class,'apoios'])->name('gm.apoios');
 
 Route::get('/adocao', [PageController::class,'adocao'])->name('gm.adocao');
+
+Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');

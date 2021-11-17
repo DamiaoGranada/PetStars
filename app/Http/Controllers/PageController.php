@@ -22,4 +22,8 @@ class PageController extends Controller
         return view('gm.adocao')->with('menuOption', 'B');
     }
 
+    public function faq(){
+        return view('gm.faq')->with('menuOption', 'D');
+    }
+
 }
