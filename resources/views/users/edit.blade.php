@@ -10,7 +10,9 @@
 		</div>
 		<div class="card-body">
 
-			<form method="POST" action="#" class="form-group" enctype="multipart/form-data">
+			<form method="POST" action="{{route('users.update',$user)}}" class="form-group" enctype="multipart/form-data">
+				@csrf
+				@method("PUT")
 				@include('users.partials.add-edit')
 				<div class="form-group">
 					<button type="submit" class="btn btn-success" name="ok">Save</button>
@@ -21,7 +23,7 @@
 
 			</form>
 
-			<a href="#" class="btn btn-primary">Enviar email de ativação</a>
+			<a href="{{route('users.sendActivationEmail',$user)}" class="btn btn-primary">Enviar email de ativação</a>
 		</div>
 	</div>
 </div>

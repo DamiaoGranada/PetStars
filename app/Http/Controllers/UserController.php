@@ -32,6 +32,7 @@ class UserController extends Controller
             $users=$users->get();
         }
         return view('users.list', compact('users'));
+        
     }
 
     /**

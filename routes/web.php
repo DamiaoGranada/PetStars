@@ -29,16 +29,6 @@ Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');
 
 Route::get('/contactos', [PageController::class,'contactos'])->name('gm.contactos');
 
-
-Route::resource('users', UserController::class);
-Route::resource('posts', PostController::class);
-Route::resource('categories', CategoryController::class);
-
-
-
-Route::get('/admin', [HomeController::class,'index'])->name('admin');
-Auth::routes(['register' => false, 'verify' => true]);
-
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/users/{user}/send_reactivate_mail',
     [UserController::class,'send_reactivate_email'])->name('users.sendActivationEmail');
@@ -47,6 +37,6 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::resource('users',UserController::class);
    });
    
-Auth::routes();
+Auth::routes(['register' => false, 'verify' => true]);
 
-Route::get('/admin', [HomeController::class,'index'])->name('admin');
+Route::get('/admin', [App\Http\Controllers\HomeController::class,'index'])->name('admin');
