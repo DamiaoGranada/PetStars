@@ -6,6 +6,7 @@
 <body>
 <link rel="stylesheet" type="text/css" href="{{asset('css/apoios.css')}}">    
 
+<div class="vazio"></div>
 
 <h1>Patrocinadores</h1>
 
@@ -23,7 +24,7 @@
                         Acana
                     </div>
                     <div class="despatro">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 
+                    A marca Acana está sob o patrocínio da Champions Petfoods, uma fabricante canadense premiada e de grande reputação. Fabrica ração biologicamente adequada com Ingredientes Regionais Frescos.
                     </div>
                 </div>
             </div>
@@ -36,7 +37,7 @@
                         Pedrigree
                     </div>
                     <div class="despatro">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 
+                    A Pedigree, através de seus alimentos e petiscos, assegura a certeza de que o “melhor amigo do homem” sempre esteja feliz, saudável e em plena forma.   
                     </div>
                 </div>
             </div>
@@ -49,7 +50,7 @@
                         Royal Canin
                     </div>
                     <div class="despatro">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 
+                    A Royal Canin foi fundada em 1968 por um médico veterinário com uma visão: melhorar a saúde dos gatos e dos cães através da nutrição. 
                     </div>
                 </div>
             </div>
@@ -71,7 +72,7 @@
                         Purina
                     </div>
                     <div class="despatro">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 
+                        A Purina, há mais de 125 anos, que ajudamos cães e gatos a usufruirem de vidas saudáveis e felizes. Alimentos nutritivos e 100% saudaveis.  
                     </div>
                 </div>
             </div>
@@ -84,10 +85,10 @@
                         Felix
                     </div>
                     <div class="despatro">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 
-                    </div>
+                    Comida húmida para gatos adultos Felix são receitas com tenros pedaços numa suculenta gelatina para uma deliciosa refeição a que o seu gato vai gostar.
                 </div>
             </div>
+        </div>
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="imgpatro_proplan">
@@ -97,12 +98,13 @@
                         ProPlan
                     </div>
                     <div class="despatro">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut 
+                        A Proplan apresenta a melhor ração de cão que existe no mercado. Com base vegetal a ração Proplan apresenta todos os nutrientes que o seu animo necessita dia-a-dia. 
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
     <div class="vazio"></div>
     
 </body>
