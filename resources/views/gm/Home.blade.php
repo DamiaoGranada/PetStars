@@ -1,5 +1,11 @@
 @extends('master')
 
+@section ('title')
+
+Home
+
+@endsection
+
 @section ('content')
 <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
 <div class="position-relative" >
