@@ -168,15 +168,12 @@
        <div class="  col-12 col-md-6 text-center ">
 <img  class=" imagens-evento align-middle" src="fotos/cao.jpg" alt="">
 
-
-
        </div>
 
       </div>
 
     </div>
 
-   
 
   </div>
 
