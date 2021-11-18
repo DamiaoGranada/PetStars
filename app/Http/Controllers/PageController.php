@@ -26,4 +26,8 @@ class PageController extends Controller
         return view('gm.faq')->with('menuOption', 'D');
     }
 
+    public function contactos(){
+        return view('gm.contactos')->with('menuOption', 'O');
+    }
+
 }
