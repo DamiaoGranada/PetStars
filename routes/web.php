@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,10 +26,17 @@ Route::get('/adocao', [PageController::class,'adocao'])->name('gm.adocao');
 
 Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');
 
-Route::get('/contactos', [PageController::class,'contactos'])->name('gm.contactos');
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/contactos', [PageController::class,'contactos'])->name('gm.contactos');
+
+
+Route::resource('users', UserController::class);
+Route::resource('posts', PostController::class);
+Route::resource('categories', CategoryController::class);
+
+
+
+Route::get('/admin', [HomeController::class,'index'])->name('admin');
 Auth::routes(['register' => false, 'verify' => true]);
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
@@ -35,3 +46,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::resource('categories',CategoryController::class);
     Route::resource('users',UserController::class);
    });
+   
+Auth::routes();
+
+Route::get('/admin', [HomeController::class,'index'])->name('admin');

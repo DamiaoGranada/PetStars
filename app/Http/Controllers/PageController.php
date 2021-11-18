@@ -30,4 +30,7 @@ class PageController extends Controller
         return view('gm.contactos')->with('menuOption', 'O');
     }
 
+ 
+
+
 }
