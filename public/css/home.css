@@ -19,21 +19,34 @@ height: 100%;
     
 }
 
-#title2{
+.title2{
     font-size:calc(8px + 2.5vw) !important; 
 }
+
+.title3{
+    font-size:calc(5px + 2.5vw) !important; 
+}
+
+.texto{
+    font-size:calc(2px + 2vw) !important; 
+}
+
 .imagens{
-    width: 60%;
+    width: 50%;
 
 }
 
 .imagens-evento{
-    max-width: 60%;
+    width: 60%;
 
 }
 
 .w-80{
     width: 80%;
+}
+
+.bg-orange{
+    background-color:rgb(255, 145, 0, 1);
 }
 
 
