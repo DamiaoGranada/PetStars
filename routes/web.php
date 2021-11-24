@@ -1,8 +1,12 @@
  <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +26,18 @@ Route::get('/adocao', [PageController::class,'adocao'])->name('gm.adocao');
 
 Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');
 
+
+
 Route::get('/contactos', [PageController::class,'contactos'])->name('gm.contactos');
+
+Route::group(['middleware' => ['auth', 'verified']], function () {
+    Route::get('/users/{user}/send_reactivate_mail',
+    [UserController::class,'send_reactivate_email'])->name('users.sendActivationEmail');
+    Route::resource('posts',PostController::class);
+    Route::resource('categories',CategoryController::class);
+    Route::resource('users',UserController::class);
+   });
+   
+Auth::routes(['register' => false, 'verify' => true]);
+
+Route::get('/admin', [App\Http\Controllers\HomeController::class,'index'])->name('admin');

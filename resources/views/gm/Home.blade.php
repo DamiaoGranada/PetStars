@@ -89,7 +89,7 @@ Home
     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+  <div class="carousel-item active">
 
      <div class=" d-block w-100 container-fluid">
 
@@ -120,8 +120,8 @@ Home
 
      </div>
 
-    </div>
-    <div class="carousel-item">
+  </div>
+  <div class="carousel-item">
      <div class=" d-block w-100 container-fluid">
 
       <div class="row">
@@ -130,18 +130,18 @@ Home
 
   
 
-  <h3>Evento</h3>
-  <p>venha conhecer um amigo</p>
-  <p>09H - 13H | 12/11/2021 | Campus 2 Morro do Lena, 2411-901, Leiria  </p>
-  <p>venha conhecer um amigo</p>
-  <p>venha conhecer um amigo</p>
+        <h3>Evento</h3>
+        <p>venha conhecer um amigo</p>
+        <p>09H - 13H | 12/11/2021 | Campus 2 Morro do Lena, 2411-901, Leiria  </p>
+        <p>venha conhecer um amigo</p>
+        <p>venha conhecer um amigo</p>
 
   
 
        </div>
   
        <div class="  col-12 col-md-6 text-center ">
-  <img  class=" imagens-evento align-middle" src="fotos/cat.jpg" alt="">
+        <img  class=" imagens-evento align-middle" src="fotos/cat.jpg" alt="">
   
 
 
@@ -150,7 +150,7 @@ Home
       </div>
 
      </div>
-    </div>
+  </div>
   <div class="carousel-item">
 
     <div class=" d-block w-100 container-fluid">
@@ -161,18 +161,18 @@ Home
 
 
 
-<h3>Evento</h3>
-<p>venha conhecer um amigo</p>
-<p>09H - 13H | 12/11/2021 | Campus 2 Morro do Lena, 2411-901, Leiria  </p>
-<p>venha conhecer um amigo</p>
-<p>venha conhecer um amigo</p>
+        <h3>Evento</h3>
+        <p>venha conhecer um amigo</p>
+        <p>09H - 13H | 12/11/2021 | Campus 2 Morro do Lena, 2411-901, Leiria  </p>
+        <p>venha conhecer um amigo</p>
+        <p>venha conhecer um amigo</p>
 
 
 
        </div>
 
        <div class="  col-12 col-md-6 text-center ">
-<img  class=" imagens-evento align-middle" src="fotos/cao.jpg" alt="">
+        <img  class=" imagens-evento align-middle" src="fotos/cao.jpg" alt="">
 
        </div>
 
@@ -182,7 +182,6 @@ Home
 
 
   </div>
-
   <div class="carousel-item">
 
     <div class=" d-block w-100 container-fluid">
@@ -193,18 +192,18 @@ Home
 
 
 
-<h3>Evento</h3>
-<p>venha conhecer um amigo</p>
-<p>09H - 13H | 12/11/2021 | Campus 2 Morro do Lena, 2411-901, Leiria  </p>
-<p>venha conhecer um amigo</p>
-<p>venha conhecer um amigo</p>
+        <h3>Evento</h3>
+        <p>venha conhecer um amigo</p>
+        <p>09H - 13H | 12/11/2021 | Campus 2 Morro do Lena, 2411-901, Leiria  </p>
+        <p>venha conhecer um amigo</p>
+        <p>venha conhecer um amigo</p>
 
 
 
        </div>
 
        <div class="  col-12 col-md-6 text-center ">
-<img  class=" imagens-evento align-middle" src="fotos/bird.jpg" alt="">
+        <img  class=" imagens-evento align-middle" src="fotos/bird.jpg" alt="">
 
 
 

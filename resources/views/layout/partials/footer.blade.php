@@ -17,19 +17,19 @@
     <h5 class="widget-title">Acesso Rapido<span></span></h5>
     <ul class="thumbnail-widget">
     <li>
-    <div class="thumb-content"><a href="#">Home</a></div>	
+    <div class="thumb-content"><a href="{{route('gm.Home')}}">Home</a></div>	
     </li>
     <li>
-    <div class="thumb-content"><a href="#">PetStars</a></div>	
+    <div class="thumb-content"><a href="{{route('gm.contactos')}}">PetStars</a></div>	
     </li>
     <li>
-    <div class="thumb-content"><a href="#">Adoção</a></div>	
+    <div class="thumb-content"><a href="{{route('gm.adocao')}}">Adoção</a></div>	
     </li>
     <li>
-    <div class="thumb-content"><a href="#">Faqs</a></div>	
+    <div class="thumb-content"><a href="{{route('gm.faq')}}">Faqs</a></div>	
     </li>
     <li>
-    <div class="thumb-content"><a href="#">Apoios</a></div>	
+    <div class="thumb-content"><a href="{{route('gm.apoios')}}">Apoios</a></div>	
     </li>
     <li>
     <div class="thumb-content"><a href="#">Loja</a></div>	

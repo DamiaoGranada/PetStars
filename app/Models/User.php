@@ -7,10 +7,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Post;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Authenticatable
+
+
+
+
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
+    use Notifiable;
+    use SoftDeletes;
+    use Notifiable;
+
 
     /**
      * The attributes that are mass assignable.
@@ -21,6 +31,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -41,4 +52,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function posts(){
+        return $this->hasMany(Post::class,"user_id","id");
+         }
+         public function roleToStr(){
+         switch($this->role){
+         case 'N':
+         return 'Normal';
+         case 'A':
+         return 'Admin';
+         }
+         }
+         public function isAdmin(){
+            return $this->role=='A';
+        }
+    
 }
