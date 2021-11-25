@@ -7,6 +7,10 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 
+
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,3 +45,21 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 Auth::routes(['register' => false, 'verify' => true]);
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class,'index'])->name('admin');
+
+
+Route::get('start-users-db', function() {
+    User::create([
+        'name' => 'Admin',
+        'email' => 'admin@petstars.pt',
+        'password' => Hash::make('123'),
+        'apelido' => 'Admin',
+        'nif' => '999999991',
+        'funcao' => 'admin',
+        'localidade' => 'Leiria',
+        'cod_postal' => '0000-000',
+        'rua' => 'Rua XPTO, 1',
+        'telefone' => '911111111',
+    ]);
+
+    return redirect()->route('gm.Home');
+});

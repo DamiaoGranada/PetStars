@@ -21,17 +21,14 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->string('apelido', 25)->nullable(TRUE);
-            $table->char('nif', 9)->unique()->nullable(TRUE);
-            $table->enum('funcao', array('admin', 'cliente'))->nullable(TRUE);
-            $table->string('localidade')->nullable(TRUE);
-            $table->char('cod_postal', 8)->nullable(TRUE);
-            $table->string('rua')->nullable(TRUE);
-            $table->char('telefone', 9)->unique()
-                                        ->nullable(TRUE);
 
-
-            
+            $table->string('apelido', 25);
+            $table->char('nif', 9)->unique();
+            $table->enum('funcao', ['admin', 'cliente']);
+            $table->string('localidade');
+            $table->char('cod_postal', 8);
+            $table->string('rua');
+            $table->char('telefone', 9);
             
         });
     }
