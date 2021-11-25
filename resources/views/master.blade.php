@@ -9,9 +9,7 @@
         <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
         <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
              <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-        <script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
-        <script src="{{asset('js/bootstrap/bootstrap.min.js')}}"></script>
-             <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
+
         <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
         
         <link href="{{asset('css/navbar.css')}}" rel="stylesheet">
