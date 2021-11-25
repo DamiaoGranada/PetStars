@@ -1,12 +1,16 @@
-@extends('layout.admin')
+<html>
+<link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}"> 
+<link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+        <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+             <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-@section('content')
-<link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}">    
-
+<body class="cor">
+    
 <div id="login">
     <div>
-    <a  href="#">
+    <a  href="{{route('gm.Home')}}">
         <img src="{{asset('img/logo.png')}}" alt="logo" id="logo"></div>
+</a>
 <div class="container">
     <div id="login-row" class="row justify-content-center align-items-center">
         <div id="login-column" class="col-md-6">
@@ -73,4 +77,6 @@
         </div>
     </div>
 </div>
-@endsection
+
+</body>
+</html>

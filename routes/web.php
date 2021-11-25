@@ -30,6 +30,8 @@ Route::get('/adocao', [PageController::class,'adocao'])->name('gm.adocao');
 
 Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');
 
+Route::get('/login', [PageController::class,'login'])->name('login');
+
 
 
 Route::get('/contactos', [PageController::class,'contactos'])->name('gm.contactos');
