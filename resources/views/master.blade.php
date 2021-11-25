@@ -13,14 +13,14 @@
         <script src="{{asset('js/bootstrap/bootstrap.min.js')}}"></script>
              <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
-        <link href="{{asset('css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
-         <link href="{{asset('css/navbar.css')}}" rel="stylesheet">
+        
+        <link href="{{asset('css/navbar.css')}}" rel="stylesheet">
 
          
 
             <title>
             @yield('title')
-            Home
+            
             </title>
     </head>
 

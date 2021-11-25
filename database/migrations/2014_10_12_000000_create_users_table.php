@@ -21,6 +21,15 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->string('apelido', 25);
+            $table->char('nif', 9)->unique();
+            $table->enum('funcao', ['admin', 'cliente']);
+            $table->string('localidade');
+            $table->char('cod_postal', 8);
+            $table->string('rua');
+            $table->char('telefone', 9);
+            
         });
     }
 
