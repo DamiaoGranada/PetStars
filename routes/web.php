@@ -49,6 +49,9 @@ Auth::routes(['register' => false, 'verify' => true]);
 Route::get('/admin', [App\Http\Controllers\HomeController::class,'index'])->name('admin');
 
 
+
+
+
 Route::get('start-users-db', function() {
     User::create([
         'name' => 'Admin',

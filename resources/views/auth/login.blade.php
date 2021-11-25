@@ -1,4 +1,6 @@
 <html>
+registar1.css
+ 
 <link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}"> 
 <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
         <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
@@ -57,8 +59,13 @@
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-8">
-                                <button type="submit" class="btn btn-light">
+                                <button type="submit" class="btn btn-light"  >
                                     {{ __('Login') }}
+                                    
+                                </button>
+                                <button type="submit" class="btn btn-light"  >
+                                    {{ __('Register') }}
+                                    
                                 </button>
 
                                 
@@ -70,6 +77,8 @@
                                     </a>
                                 @endif
                         </div>
+
+                        
                         
             </form>
 
