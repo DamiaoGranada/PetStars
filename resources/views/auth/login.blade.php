@@ -1,5 +1,5 @@
 <html>
-registar1.css
+
  
 <link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}"> 
 <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
