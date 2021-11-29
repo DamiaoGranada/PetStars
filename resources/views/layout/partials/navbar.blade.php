@@ -10,7 +10,7 @@
         <li class="@if ($menuOption=='D') active @endif"><a href="{{route('gm.faq')}}"> Faqs </a></li>
         <li class="@if ($menuOption=='C') active @endif"><a href="{{route('gm.apoios')}}"> Apoios </a></li>
         <li><a href="#"> Loja </a></li>
-        <li><a href="#"> Login </a></li>
+        <li><a href="{{route('login')}}"> Login </a></li>
         
     </ul>
 </nav>

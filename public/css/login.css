@@ -1,5 +1,6 @@
-btn btn-lightbody {
-  background-color: lightgoldenrodyellow;
+
+body {
+ 
   height: 100%;
   background-position: inherit;
   background-repeat: no-repeat;
@@ -51,4 +52,12 @@ btn btn-lightbody {
 
 .texto{
   color: black;
+}
+
+.col-form-label{
+  color: black;
+}
+
+.cor{
+  background-color: #f5f1eb;
 }

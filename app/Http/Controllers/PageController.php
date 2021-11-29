@@ -29,6 +29,10 @@ class PageController extends Controller
     public function contactos(){
         return view('gm.contactos')->with('menuOption', 'O');
     }
+
+    public function login(){
+        return view('login')->with('menuOption', 'L');
+    }
   
  
 
