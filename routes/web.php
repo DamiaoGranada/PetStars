@@ -30,6 +30,8 @@ Route::get('/adocao', [PageController::class,'adocao'])->name('gm.adocao');
 
 Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');
 
+Route::get('/login', [PageController::class,'login'])->name('login');
+
 
 
 Route::get('/contactos', [PageController::class,'contactos'])->name('gm.contactos');
@@ -45,6 +47,9 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 Auth::routes(['register' => false, 'verify' => true]);
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class,'index'])->name('admin');
+
+
+
 
 
 Route::get('start-users-db', function() {

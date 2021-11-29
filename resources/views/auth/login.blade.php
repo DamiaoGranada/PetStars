@@ -1,12 +1,18 @@
-@extends('layout.admin')
+<html>
 
-@section('content')
-<link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}">    
+ 
+<link rel="stylesheet" type="text/css" href="{{asset('css/login.css')}}"> 
+<link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+        <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+             <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
+<body class="cor">
+    
 <div id="login">
     <div>
-    <a  href="#">
+    <a  href="{{route('gm.Home')}}">
         <img src="{{asset('img/logo.png')}}" alt="logo" id="logo"></div>
+</a>
 <div class="container">
     <div id="login-row" class="row justify-content-center align-items-center">
         <div id="login-column" class="col-md-6">
@@ -53,8 +59,13 @@
                         </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-8">
-                                <button type="submit" class="btn btn-light">
+                                <button type="submit" class="btn btn-light"  >
                                     {{ __('Login') }}
+                                    
+                                </button>
+                                <button type="submit" class="btn btn-light"  >
+                                    {{ __('Register') }}
+                                    
                                 </button>
 
                                 
@@ -66,6 +77,8 @@
                                     </a>
                                 @endif
                         </div>
+
+                        
                         
             </form>
 
@@ -73,4 +86,6 @@
         </div>
     </div>
 </div>
-@endsection
+
+</body>
+</html>
