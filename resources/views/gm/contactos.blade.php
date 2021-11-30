@@ -5,12 +5,11 @@
 @section('content')
 <body>
 <link rel="stylesheet" type="text/css" href="{{asset('css/contactos.css')}}">    
-
     <div class="container">
 
         <div class="espaco"></div>
 
-        <img src="fotos/cao1.jpg" alt="img" class="img1">
+        <img src="fotos/contactos/cao1.jpg" alt="img" class="img1">
 
         <div class="espaco"></div>
 
@@ -22,7 +21,7 @@
         <p class="p1">
             A nossa Instituição é uma associação de proteção animal dedicada aos nossos animais que facilita a adoção de todo o tipo de animais
             como cães, gatos e pássaros ou entregar os seus, em caso de necessidades e falta de condições para manter o animal.
-            <ul class="ul1">
+            <ul>
                 <li>Instituição com fundos não lucrativos;</li>
 
                 <li>Dar conhecimento ao publico;</li>
@@ -43,7 +42,7 @@
         <p class="p1">
             Providenciar aos poderes nacionais e locais, instituições e comunidades os conhecimentos, os recursos, a capacidade e o desejo para melhorar o bem-estar animal e garantir que as suas necessidades são activamente supridas.
 
-            <ul class="ul1">
+            <ul>
                 <li>
                     Solidariedade
                 </li>
@@ -85,65 +84,65 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="equipa1">
-                        <img src="fotos/cao2.jpg" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/rat.jpg" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Diogo Ferreira
                     </div>
                     <div class="despatro">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                        Elemento Super importante que organiza design grafico do website e é a fonte de imaginação e ideias da equipa, exelente a escolher cores e resolver problemas das mesmas, alem disso é Nadador-Salvador e Surfista. 
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="equipa2">
-                        <img src="fotos/cao2.jpg" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/cao.jpg" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Joao Domingos
                     </div>
                     <div class="despatro">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                        Elemento mais importante do grupo, mantem a organização dos documentos e ficheiros, bom na implementação da BD, é tambem um bocado chato , tem atitutes de uma pessoa de idade e é teimoso e tem cabelos brancos.
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="equipa3">
-                        <img src="fotos/cao2.jpg" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/peixe.png" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Mario Jorge
                     </div>
                     <div class="despatro">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                        Elemento consistente com bases e conhecimentos gerais de toda a informatica. Exelente a resolver problemas tecnicos e de login.
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4 offset-sm-2">
                 <div class="cartao">
                     <div class="equipa4">
-                        <img src="fotos/cao2.jpg" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/cat.jpg" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Catarina Veloso
                     </div>
                     <div class="despatro">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                        Moral e vos da equipa, boa no trabalho de design e imagem.
                     </div>
                 </div>
             </div>
             <div class="col-sm-6">
                 <div class="cartao">
                     <div class="equipa5">
-                        <img src="fotos/cao2.jpg" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/lagarto.jpg" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Damiao Granada
                     </div>
                     <div class="despatro">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
+                        Elemento que trabalha bem nos codigos e ligações do website e ficheiros.
                     </div>
                 </div>
             </div>
@@ -167,7 +166,7 @@
             </div>
             <div class="col-sm-6">
 
-                <img class="img3" src="fotos/cao3.png">
+                <img class="img3" src="fotos/contactos/cao3.png">
             </div>
         </div>
 
@@ -181,8 +180,13 @@
             </div>
 
             <div class="form-group">
-                <label  class="p1" for="exampleFormControlTextarea1">Comentario:</label>
+                <label class="p1" for="exampleFormControlTextarea1">Comentario:</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Deixe aqui o seu comentario"></textarea>
+            </div>
+
+            <div class="form-group">
+                <br>
+                <input type="submit" name="submit" class="btn btn-info btn-md" value="Enviar">
             </div>
         </form>
 

@@ -18,7 +18,7 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="imgpatro_arcana">
-                        <img src="fotos/acana.png" alt="Patrocinio">
+                        <img src="fotos/apoios/acana.png" alt="Patrocinio">
                     </div>
                     <div class="nomepatro">
                         Acana
@@ -31,7 +31,7 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="imgpatro_pedigree">
-                        <img src="fotos/pedigree.png" alt="Patrocinio">
+                        <img src="fotos/apoios/pedigree.png" alt="Patrocinio">
                     </div>
                     <div class="nomepatro">
                         Pedrigree
@@ -44,7 +44,7 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="imgpatro_royal">
-                        <img src="fotos/royal.png" alt="Patrocinio">
+                        <img src="fotos/apoios/royal.png" alt="Patrocinio">
                     </div>
                     <div class="nomepatro">
                         Royal Canin
@@ -66,7 +66,7 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="imgpatro_purina">
-                        <img src="fotos/purina.png" alt="Patrocinio">
+                        <img src="fotos/apoios/purina.png" alt="Patrocinio">
                     </div>
                     <div class="nomepatro">
                         Purina
@@ -79,7 +79,7 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="imgpatro_felix">
-                        <img src="fotos/felix.png" alt="Patrocinio">
+                        <img src="fotos/apoios/felix.png" alt="Patrocinio">
                     </div>
                     <div class="nomepatro">
                         Felix
@@ -92,7 +92,7 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="imgpatro_proplan">
-                        <img src="fotos/proplan.png" alt="Patrocinio">
+                        <img src="fotos/apoios/proplan.png" alt="Patrocinio">
                     </div>
                     <div class="nomepatro">
                         ProPlan
