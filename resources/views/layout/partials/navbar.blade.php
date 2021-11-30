@@ -9,7 +9,7 @@
         <li class="@if ($menuOption=='B') active @endif"><a href="{{route('gm.adocao')}}"> Adoção </a></li>
         <li class="@if ($menuOption=='D') active @endif"><a href="{{route('gm.faq')}}"> Faqs </a></li>
         <li class="@if ($menuOption=='C') active @endif"><a href="{{route('gm.apoios')}}"> Apoios </a></li>
-        <li><a href="https://lojapetstars.g2.dwm22.space/"> Loja </a></li>
+        <li><a href="https://lojapetstars.g2.dwm22.space/2021/11/03/hello-world/"> Loja </a></li>
         <li><a href="{{route('login')}}"> Login </a></li>
         
     </ul>
