@@ -7,8 +7,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AdocaoController;
-
-
+use App\Http\Controllers\ApoiosController;
+use App\Models\Apoios;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -25,18 +25,16 @@ use Illuminate\Support\Facades\Hash;
 
 Route::get('/', [PageController::class,'Home'])->name('gm.Home');
 
-Route::get('/apoios', [PageController::class,'apoios'])->name('gm.apoios');
+Route::get('/apoios', [ApoiosController::class,'display'])->name('gm.apoios');
 
-Route::get('/adocao', [PageController::class,'adocao'])->name('gm.adocao');
+Route::get('/adocao', [AdocaoController::class ,'display'])->name('gm.adocao');
 
 Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');
 
 Route::get('/login', [PageController::class,'login'])->name('login');
 
 
-Route::get('/teste1', [AdocaoController::class,'index']);
-Route::get('/teste2', [AdocaoController::class,'store']);
-Route::get('/teste3', [AdocaoController::class,'display']);
+
 
 
 
