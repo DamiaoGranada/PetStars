@@ -83,139 +83,43 @@ Home
 
  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
+  @foreach($evento as $eventos)
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->index }}" @if($loop->first)  class="active" @endif ></li>
+
+    @endforeach
+
   </ol>
   <div class="carousel-inner">
-  <div class="carousel-item active">
 
-     <div class=" d-block w-100 container-fluid">
+  @foreach($evento as $eventos)
 
-      <div class="row">
-      
-        <div class="  col-12 col-md-6 ">
-
-        
-
-        <h3>Evento</h3>
-        <p>venha conhecer um amigo</p>
-        <p>09H - 13H | 12/11/2021 | Campus 2 Morro do Lena, 2411-901, Leiria  </p>
-        <p>venha conhecer um amigo</p>
-        <p>venha conhecer um amigo</p>
-
-        
-
-        </div>
-        
-        <div class="  col-12 col-md-6 text-center ">
-        <img  class=" imagens-evento align-middle" src="fotos/cao.jpg" alt="">
-        
-
-
-        </div>
-
-      </div>
-
-     </div>
-
-  </div>
-  <div class="carousel-item">
+  <div class="carousel-item @if ($loop->first) active @endif">
      <div class=" d-block w-100 container-fluid">
 
       <div class="row">
 
        <div class="  col-12 col-md-6 ">
 
-  
-
-        <h3>Evento</h3>
-        <p>venha conhecer um amigo</p>
-        <p>09H - 13H | 12/11/2021 | Campus 2 Morro do Lena, 2411-901, Leiria  </p>
-        <p>venha conhecer um amigo</p>
-        <p>venha conhecer um amigo</p>
-
-  
-
+        <h3>{{ $eventos->nome_evento }}</h3>
+        <p>{{ $eventos->descri_evento }}</p>
+        <p>{{ $eventos->data_evento }} | {{ $eventos->local_evento }}  </p>
+        <p>{{ $eventos->tipo_evento }}</p>
+     
        </div>
   
        <div class="  col-12 col-md-6 text-center ">
-        <img  class=" imagens-evento align-middle" src="fotos/cat.jpg" alt="">
+        <img  class=" imagens-evento align-middle" src="{{ asset($eventos->foto->first()->caminho) }}" alt="">
   
-
-
        </div>
 
       </div>
 
      </div>
   </div>
-  <div class="carousel-item">
+  @endforeach
 
-    <div class=" d-block w-100 container-fluid">
-
-      <div class="row">
-
-       <div class="  col-12 col-md-6 ">
-
-
-
-        <h3>Evento</h3>
-        <p>venha conhecer um amigo</p>
-        <p>09H - 13H | 12/11/2021 | Campus 2 Morro do Lena, 2411-901, Leiria  </p>
-        <p>venha conhecer um amigo</p>
-        <p>venha conhecer um amigo</p>
-
-
-
-       </div>
-
-       <div class="  col-12 col-md-6 text-center ">
-        <img  class=" imagens-evento align-middle" src="fotos/cao.jpg" alt="">
-
-       </div>
-
-      </div>
-
-    </div>
-
-
-  </div>
-  <div class="carousel-item">
-
-    <div class=" d-block w-100 container-fluid">
-
-      <div class="row">
-
-       <div class="  col-12 col-md-6 ">
-
-
-
-        <h3>Evento</h3>
-        <p>venha conhecer um amigo</p>
-        <p>09H - 13H | 12/11/2021 | Campus 2 Morro do Lena, 2411-901, Leiria  </p>
-        <p>venha conhecer um amigo</p>
-        <p>venha conhecer um amigo</p>
-
-
-
-       </div>
-
-       <div class="  col-12 col-md-6 text-center ">
-        <img  class=" imagens-evento align-middle" src="fotos/bird.jpg" alt="">
-
-
-
-       </div>
-
-      </div>
-
-    </div>
-
-   
-
-  </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
