@@ -7,8 +7,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AdocaoController;
-use App\Http\Controllers\ApoiosController;
-use App\Models\Apoios;
+use App\Http\Controllers\EventosController;
+
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -23,11 +23,11 @@ use Illuminate\Support\Facades\Hash;
 |
 */
 
-Route::get('/', [PageController::class,'Home'])->name('gm.Home');
+Route::get('/', [EventosController::class,'display'])->name('gm.Home');
 
 Route::get('/apoios', [ApoiosController::class,'display'])->name('gm.apoios');
 
-Route::get('/adocao', [AdocaoController::class ,'display'])->name('gm.adocao');
+Route::get('/adocao', [AdocaoController::class,'display'])->name('gm.adocao');
 
 Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');
 
