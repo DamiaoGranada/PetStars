@@ -14,13 +14,10 @@ class Apoio extends Migration
     public function up()
     {
         Schema::create('apoio', function (Blueprint $table) {
-
-            $table->id()->nullable(false);
-            $table->string('nome_apoio',20)->nullable(false);
-            $table->string('descri_apoio', 200)->nullable(false);
-            $table->string('caminho_apoio')->nullable(false);
-
-            $table->rememberToken();
+            $table->id();
+            $table->string('nome_apoio',20)->nullable();
+            $table->string('descri_apoio', 200)->nullable();
+            $table->string('caminho_apoio')->nullable();
             $table->timestamps();
         });
     

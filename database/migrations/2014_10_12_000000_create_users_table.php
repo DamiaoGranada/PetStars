@@ -19,8 +19,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
 
             $table->string('apelido', 25);
             $table->char('nif', 9)->unique();
@@ -30,6 +28,8 @@ class CreateUsersTable extends Migration
             $table->string('rua');
             $table->char('telefone', 9);
             
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 

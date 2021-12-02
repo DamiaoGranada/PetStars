@@ -15,13 +15,12 @@ class Contactos extends Migration
     {
         Schema::create('contactos', function (Blueprint $table) {
 
-            $table->id()->nullable(false);
-            $table->string('nome_comentario',20)->nullable(false);
-            $table->string('email_comentario', 45)->nullable(false);
-            $table->date('data_envio')->nullable(false);
-            $table->string('mensagem')->nullable(false);
+            $table->id();
+            $table->string('nome_comentario',20)->nullable();
+            $table->string('email_comentario', 45)->nullable();
+            $table->date('data_envio')->nullable();
+            $table->string('mensagem')->nullable();
 
-            $table->rememberToken();
             $table->timestamps();
         });
     }

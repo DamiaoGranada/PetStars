@@ -23,8 +23,6 @@ class Animal extends Migration
             $table->string('especie', 25)->nullable(false);
             $table->enum('genero', array('M','F'))->nullable(false);
             $table->string('local_animal', 25)->nullable(false);
-
-            $table->rememberToken();
             $table->timestamps();
         });
     }

@@ -6,6 +6,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AdocaoController;
 
 
 use App\Models\User;
@@ -33,6 +34,13 @@ Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');
 Route::get('/login', [PageController::class,'login'])->name('login');
 
 
+Route::get('/teste1', [AdocaoController::class,'index']);
+Route::get('/teste2', [AdocaoController::class,'store']);
+Route::get('/teste3', [AdocaoController::class,'display']);
+
+
+
+
 
 Route::get('/contactos', [PageController::class,'contactos'])->name('gm.contactos');
 
@@ -43,7 +51,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::resource('categories',CategoryController::class);
     Route::resource('users',UserController::class);
    });
-   
+
 Auth::routes(['register' => false, 'verify' => true]);
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class,'index'])->name('admin');

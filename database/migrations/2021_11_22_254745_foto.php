@@ -14,18 +14,18 @@ class Foto extends Migration
     public function up()
     {
         Schema::create('foto', function (Blueprint $table) {
-            $table->id()->nullable(false);
-            $table->enum('tipo_foto', array('Evento','Animal'))->nullable(false);
-            $table->string('caminho')->nullable(false);
+            $table->id()
+            ;
+            $table->enum('tipo_foto', array('Evento','Animal'))->nullable();
+            $table->string('caminho')->nullable();
 
        
-            $table->unsignedBigInteger('id_animal')->nullable(false);
+            $table->unsignedBigInteger('id_animal')->nullable();
             $table->foreign('id_animal')->references('id')->on('animal');
             
-            $table->unsignedBigInteger('id_eventos')->nullable(false);
+            $table->unsignedBigInteger('id_eventos')->nullable();
             $table->foreign('id_eventos')->references('id')->on('eventos');
 
-            $table->rememberToken();
             $table->timestamps();
         });
     }

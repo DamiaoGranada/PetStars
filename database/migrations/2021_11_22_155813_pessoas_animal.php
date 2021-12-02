@@ -15,7 +15,7 @@ class PessoasAnimal extends Migration
     {
         Schema::create('pessoas_animal', function (Blueprint $table) {
 
-            $table->id()->nullable(false);
+            $table->id();
 
             $table->date('data_adocao')->nullable(false);
 
@@ -24,7 +24,6 @@ class PessoasAnimal extends Migration
             $table->unsignedBigInteger('id_user')->nullable(false);
             $table->foreign('id_user')->references('id')->on('users');
 
-            $table->rememberToken();
             $table->timestamps();
         });
     }
