@@ -32,7 +32,7 @@ class UserController extends Controller
             $users=$users->get();
         }
         return view('users.list', compact('users'));
-        
+
     }
 
     /**
@@ -76,7 +76,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return view('users.show',compact("user"));
     }
 
     /**
