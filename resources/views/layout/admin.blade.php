@@ -117,9 +117,12 @@
         <div id="collapseApoios" class="collapse"  data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Categories:</h6>
-            <a class="collapse-item" href="">List Categories</a>
+            <a class="collapse-item" href="">Lista de Apoios</a>
+
+            <a class="collapse-item" href="">Adicionar Apoios</a>
             
           </div>
+          
         </div>
       </li>
 
