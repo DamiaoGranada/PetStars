@@ -12,11 +12,12 @@
 </head>
 
 
-<body>
+<body class="cor">
 
 
 		<div id="login">
             <img src="{{asset('img/logo.png')}}" alt="logo" id="logo"></div>
+            <div class="vazio"></div>
         <div class="container">
           
         @dump($errors)
@@ -29,12 +30,12 @@
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
 
-					<h3 class="text-center text-info" id="titulo">Registar</h3>
+					<h3 class="text-center " id="titulo">Registar</h3>
                     <div class="row">
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
 
-									<label for="name" class="text-info">Nome:</label><br>
+									<label for="name" class="">Nome:</label><br>
 
 			               			<input type="text" name="name" id="first_name" class="form-control input-sm @error('name') is-valid @enderror" value="{{old('name')}}" required autocomplete="name" autofocus placeholder="Insira o primeiro nome">
 
@@ -48,7 +49,7 @@
 			    				</div>
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
-									<label for="apelido" class="text-info">Apelido:</label><br>
+									<label for="apelido" class="">Apelido:</label><br>
 			    					<input type="text" name="apelido" id="last_name" class="form-control input-sm @error('apelido') is-valid @enderror" value="{{old('apelido')}}" required autocomplete="apelido" autofocus placeholder="Insira a Apelido">
                                     @error("apelido")
 
@@ -60,7 +61,7 @@
 			    				</div>
 			    			</div>
                             <div class="form-group">
-								<label for="localidade" class="text-info">Localidade:</label><br>
+								<label for="localidade" class="">Localidade:</label><br>
 			    				<input type="text" name="localidade" id="localidade" class="form-control input-sm @error('localidade') is-valid @enderror" value="{{old('localidade')}}" required autocomplete="localidade" autofocus placeholder="Insira a sua localidade">
                                 @error("localidade")
 
@@ -70,7 +71,7 @@
                                 @enderror
                             </div>
 							<div class="form-group">
-									<label for="rua" class="text-info">Rua:</label><br>
+									<label for="rua" class="">Rua:</label><br>
 			    				    <input type="text" name="rua" id="rua" class="form-control input-sm @error('rua') is-valid @enderror" value="{{old('rua')}}" required autocomplete="rua" autofocus placeholder="Insira a rua">
                                     @error("rua")
 
@@ -85,7 +86,7 @@
 							<div class="row">
 								<div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
-										<label for="nif" class="text-info">Nif:</label><br>
+										<label for="nif" class="">Nif:</label><br>
 			    						<input type="text" name="nif" id="nif" class="form-control input-sm @error('nif') is-valid @enderror" value="{{old('nif')}}" required autocomplete="nif" autofocus placeholder="Insira o nif">
                                         @error("nif")
 
@@ -102,7 +103,7 @@
                             <div class="row">
                                     <div class="col-xs-6 col-sm-6 col-md-6">
 										 <div class="form-group">
-										 <label for="telefone" class="text-info">Telefone:</label><br>
+										 <label for="telefone" class="">Telefone:</label><br>
 			    				<input type="number" name="telefone" id="telefone" class="form-control input-sm @error('telefone') is-valid @enderror" value="{{old('telefone')}}" required autocomplete="telefone" autofocus placeholder="Ex: Pedro">
                                 @error("telefone")
 
@@ -116,7 +117,7 @@
                                  </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <div class="form-group">
-										<label for="cod_postl" class="text-info">Codigo Postal:</label><br>
+										<label for="cod_postl" class="">Codigo Postal:</label><br>
 			    				        <input type="text" name="cod_postal" id="cod_postal" class="form-control input-sm @error('cod_postal') is-valid @enderror" value="{{old('cod_postal')}}" required autocomplete="cod_postal" autofocus placeholder="Ex: Pedro">
                                         @error("cod_postal")
 
@@ -133,7 +134,7 @@
 			    			<div class="row">
 			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
-										<label for="email" class="text-info">Email:</label><br>
+										<label for="email" class="">Email:</label><br>
 			    						<input type="text" name="email" id="login" class="form-control input-sm @error('email') is-valid @enderror" value="{{old('email')}}" required autocomplete="email" autofocus placeholder="Ex: Pedro">
                                         @error("email")
 
@@ -145,8 +146,13 @@
 			    				</div>
 			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
+<<<<<<< HEAD
 									<label for="password" class="text-info">Password:</label><br>
 			    						<input type="password" name="password" id="password" class="form-control input-sm @error('password') is-valid @enderror">
+=======
+									<label for="password" class="">Password:</label><br>
+			    						<input type="password" name="password" id="password" class="form-control input-sm @error('password') is-valid @enderror" value="{{old('password')}}" required autocomplete="password" autofocus placeholder="Ex: Pedro">
+>>>>>>> 15e43b457833ae399b57cc3cb364aa16fc9858a3
                                         @error("password")
 
                                         <span class="text-danger" role="alert">
@@ -175,12 +181,12 @@
 							<div class="row">
 							<div class="form-group"  id="register">
                                <br>
-                                <input type="submit" name="register" class="btn btn-info btn-md" value="Registar">
+                                <input type="submit" name="register" class="btn btn-light btn-md" value="Registar">
                             </div>
 
 							<div class="form-group" id="apagar">
                                <br>
-                                <input type="reset" name="reset" class="btn btn-info btn-md" value="Apagar">
+                                <input type="reset" name="reset" class="btn btn-light btn-md" value="Apagar">
 							</div>
 							<div class="Voltar" style="margin-left:46%;">
                                <br>
@@ -194,8 +200,11 @@
             </div>
 
 
+
         </div>
+      
     </div>
+   
 </form>
 
 
