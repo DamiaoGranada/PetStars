@@ -18,6 +18,10 @@
 		<div id="login">
             <img src="{{asset('img/logo.png')}}" alt="logo" id="logo"></div>
         <div class="container">
+          
+        @dump($errors)
+
+
         <form action="{{route('register')}}" method="post" class="form">
 
             @csrf
@@ -36,7 +40,7 @@
 
                                        @error("name")
 
-                                        <span class="invalid-feedback" role="alert">
+                                        <span class="text-danger" role="alert">
                                             <strong>{{$message}}</strong>
                                         </span>
                                         @enderror
@@ -48,7 +52,7 @@
 			    					<input type="text" name="apelido" id="last_name" class="form-control input-sm @error('apelido') is-valid @enderror" value="{{old('apelido')}}" required autocomplete="apelido" autofocus placeholder="Insira a Apelido">
                                     @error("apelido")
 
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="text-danger" role="alert">
                                         <strong>{{$message}}</strong>
                                     </span>
                                     @enderror
@@ -60,7 +64,7 @@
 			    				<input type="text" name="localidade" id="localidade" class="form-control input-sm @error('localidade') is-valid @enderror" value="{{old('localidade')}}" required autocomplete="localidade" autofocus placeholder="Insira a sua localidade">
                                 @error("localidade")
 
-                                <span class="invalid-feedback" role="alert">
+                                <span class="text-danger" role="alert">
                                     <strong>{{$message}}</strong>
                                 </span>
                                 @enderror
@@ -70,7 +74,7 @@
 			    				    <input type="text" name="rua" id="rua" class="form-control input-sm @error('rua') is-valid @enderror" value="{{old('rua')}}" required autocomplete="rua" autofocus placeholder="Insira a rua">
                                     @error("rua")
 
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="text-danger" role="alert">
                                         <strong>{{$message}}</strong>
                                     </span>
                                     @enderror
@@ -85,7 +89,7 @@
 			    						<input type="text" name="nif" id="nif" class="form-control input-sm @error('nif') is-valid @enderror" value="{{old('nif')}}" required autocomplete="nif" autofocus placeholder="Insira o nif">
                                         @error("nif")
 
-                                        <span class="invalid-feedback" role="alert">
+                                        <span class="text-danger" role="alert">
                                             <strong>{{$message}}</strong>
                                         </span>
                                         @enderror
@@ -102,7 +106,7 @@
 			    				<input type="number" name="telefone" id="telefone" class="form-control input-sm @error('telefone') is-valid @enderror" value="{{old('telefone')}}" required autocomplete="telefone" autofocus placeholder="Ex: Pedro">
                                 @error("telefone")
 
-                                <span class="invalid-feedback" role="alert">
+                                <span class="text-danger" role="alert">
                                     <strong>{{$message}}</strong>
                                 </span>
                                 @enderror
@@ -116,7 +120,7 @@
 			    				        <input type="text" name="cod_postal" id="cod_postal" class="form-control input-sm @error('cod_postal') is-valid @enderror" value="{{old('cod_postal')}}" required autocomplete="cod_postal" autofocus placeholder="Ex: Pedro">
                                         @error("cod_postal")
 
-                                        <span class="invalid-feedback" role="alert">
+                                        <span class="text-danger" role="alert">
                                             <strong>{{$message}}</strong>
                                         </span>
                                         @enderror
@@ -133,7 +137,7 @@
 			    						<input type="text" name="email" id="login" class="form-control input-sm @error('email') is-valid @enderror" value="{{old('email')}}" required autocomplete="email" autofocus placeholder="Ex: Pedro">
                                         @error("email")
 
-                                        <span class="invalid-feedback" role="alert">
+                                        <span class="text-danger" role="alert">
                                             <strong>{{$message}}</strong>
                                         </span>
                                         @enderror
@@ -142,15 +146,25 @@
 			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
 									<label for="password" class="text-info">Password:</label><br>
-			    						<input type="password" name="password" id="password" class="form-control input-sm @error('password') is-valid @enderror" value="{{old('password')}}" required autocomplete="password" autofocus placeholder="Ex: Pedro">
+			    						<input type="password" name="password" id="password" class="form-control input-sm @error('password') is-valid @enderror">
                                         @error("password")
 
-                                        <span class="invalid-feedback" role="alert">
+                                        <span class="text-danger" role="alert">
                                             <strong>{{$message}}</strong>
                                         </span>
                                         @enderror
 			    					</div>
 			    				</div>
+
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+			    					<div class="form-group">
+									<label for="password_confirmation" class="text-info">Password:</label><br>
+			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm @error('password_confirmation') is-valid @enderror" >
+                                       
+			    					</div>
+			    				</div>
+
+                                
 			    			</div>
 
 
