@@ -8,6 +8,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AdocaoController;
 use App\Http\Controllers\EventosController;
+use App\Http\Controllers\ApoiosController;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -25,7 +26,7 @@ use Illuminate\Support\Facades\Hash;
 
 Route::get('/', [EventosController::class,'display'])->name('gm.Home');
 
-Route::get('/apoios', [PageController::class,'apoios'])->name('gm.apoios');
+Route::get('/apoios', [ApoiosController::class,'display'])->name('gm.apoios');
 
 Route::get('/adocao', [AdocaoController::class,'display'])->name('gm.adocao');
 
@@ -33,13 +34,7 @@ Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');
 
 Route::get('/login', [PageController::class,'login'])->name('login');
 
-
-
-
-
-
-
-
+Route::get('/register', [PageController::class,'register'])->name('register');
 
 Route::get('/contactos', [PageController::class,'contactos'])->name('gm.contactos');
 
@@ -51,12 +46,11 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::resource('users',UserController::class);
    });
 
-Auth::routes(['register' => false, 'verify' => true]);
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class,'index'])->name('admin');
 
 
-
+Auth::routes(['verify'=> True]);
 
 
 Route::get('start-users-db', function() {

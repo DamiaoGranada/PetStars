@@ -11,14 +11,14 @@
              <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
         <link rel="stylesheet" type="text/css" href="{{asset('css/normalize.css')}}">
-        
+
         <link href="{{asset('css/navbar.css')}}" rel="stylesheet">
 
-         
+
 
             <title>
             @yield('title')
-            
+
             </title>
     </head>
 
@@ -28,7 +28,7 @@
 
 @include('layout.partials.navbar')
 
-<!--Começo do Body-->  
+<!--Começo do Body-->
 
 
 

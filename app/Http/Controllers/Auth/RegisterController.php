@@ -40,7 +40,7 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-
+  
     /**
      * Get a validator for an incoming registration request.
      *
@@ -49,10 +49,19 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'apelido' => ['required', 'string', 'max:255'],
+            'localidade' => ['required', 'string', 'max:255'],
+            'rua' => ['required', 'string', 'max:255'],
+            'nif' => ['required', 'string', 'min:9', 'max:9'],
+            'telefone' => ['required', 'string', 'min:9', 'max:9'],
+            'cod_postal' => ['required', 'string', 'min:7', 'max:7'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            
+            
         ]);
     }
 
@@ -66,8 +75,16 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'apelido' => $data['apelido'],
+            'localidade' => $data['localidade'],
+            'rua' => $data['rua'],
+            'nif' => $data['nif'],
+            'role' => 'N',
+            'telefone' => $data['telefone'],
+            'cod_postal' => $data['cod_postal'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+
         ]);
     }
 }

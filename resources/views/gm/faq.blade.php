@@ -18,7 +18,7 @@
             <ul class="faq-list">
 
                 <li>
-                    <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Adoções <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div data-toggle="collapse" class="collapsed question" href="#faq1">Adoções <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                     <div id="faq1" class="collapse" data-bs-parent=".faq-list">
                         <p>
                             A PetStars tem animais para adoção que se encontram a viver nas instalações da associação e tem animais em famílias de acolhimento temporário.
@@ -47,7 +47,7 @@
                 </li>
 
                 <li>
-                    <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Recolher um animal em risco <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div data-toggle="collapse" href="#faq2" class="collapsed question">Recolher um animal em risco <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                     <div id="faq2" class="collapse" data-bs-parent=".faq-list">
                         <p>
                             Se encontrou um animal abandonado deve contactar o Centro de Recolha Oficial (CRO) do Município em que se encontra o animal. Os CRO têm a responsabilidade legal de recolher, prestar cuidados médico-veterinários, desparasitar, esterilizar, albergar e alimentar
@@ -58,7 +58,7 @@
                 </li>
 
                 <li>
-                    <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">
+                    <div data-toggle="collapse" href="#faq3" class="collapsed question">
                         O que se deve fazer ao presenciar maus-tratos a um animal? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                     <div id="faq3" class="collapse" data-bs-parent=".faq-list">
                         <p>
@@ -86,7 +86,7 @@
                 </li>
 
                 <li>
-                    <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Como contactar as autoridades para denunciar maus-tratos ou ajudar animais em risco? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div data-toggle="collapse" href="#faq4" class="collapsed question">Como contactar as autoridades para denunciar maus-tratos ou ajudar animais em risco? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
                     <div id="faq4" class="collapse" data-bs-parent=".faq-list">
                         <p>
                             A PSP criou o email <a href="mailto:defesanimal@psp.pt">efesanimal@psp.pt</a> para denúncias de maus tratos a animais.

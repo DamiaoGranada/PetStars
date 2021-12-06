@@ -1,9 +1,13 @@
+
+
 body{
-	background-color: url(fundo2.jpg);
+	background-color: #f5f1eb;
 	height: 100%;
 	background-position: inherit;
 	background-repeat: no-repeat;
-	background-size: cover;}
+	background-size: cover;
+	
+}
 
 .centered-form{
 	margin-top: 60px;
@@ -16,6 +20,8 @@ body{
 
 .col-md-6{
 	opacity: 88%;
+	background-color: #ffce7b;
+	border-radius: 5%;
 }
 
 #container{
@@ -48,4 +54,9 @@ margin-left: 10px;
 
 .form-control.input-sm#M, #F{
 	width: 10px;
+}
+
+
+.vazio{
+    margin-bottom: 80px;
 }
