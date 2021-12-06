@@ -33,8 +33,11 @@ class PageController extends Controller
     public function login(){
         return view('login')->with('menuOption', 'L');
     }
-  
- 
+
+    public function registar(){
+        return view('register');
+    }
+
 
 
 }

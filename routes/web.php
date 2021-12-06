@@ -33,7 +33,7 @@ Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');
 
 Route::get('/login', [PageController::class,'login'])->name('login');
 
-
+Route::get('/register', [PageController::class,'register'])->name('register');
 
 Route::get('/contactos', [PageController::class,'contactos'])->name('gm.contactos');
 
@@ -45,12 +45,11 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::resource('users',UserController::class);
    });
 
-Auth::routes(['register' => false, 'verify' => true]);
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class,'index'])->name('admin');
 
 
-
+Auth::routes(['verify'=> True]);
 
 
 Route::get('start-users-db', function() {
