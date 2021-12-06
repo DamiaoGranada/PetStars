@@ -12,7 +12,7 @@
 
 
 <div class="position-relative" >
-<img id="banner" src="fotos/fotocapa.jpg" alt="">
+<img id="banner" src="{{ asset('fotos/fotocapa.jpg') }}" alt="">
 
 <h1 id="title" class=" position-absolute rounded-pill" > ADOÇÃO DE ANIMAIS </h1>
 </div>
@@ -22,35 +22,14 @@
 
 
 <div class="vazio"></div>
-
 <section class="container">
-        <div class="img-container">
-            <img src="fotos/primeira/1.jpg" alt="" id="blur" >
-            <p>Nome:Kiko -  Idade:1Ano</p>
-        </div>
-        <div class="img-container">
-            <img src="fotos/primeira/2.jpg" alt="" id="blur">
-            <p>Nome:Sorte - Idade:2Meses</p>
-        </div>
-        <div class="img-container">
-            <img src="fotos/primeira/3.jpg" alt="" id="blur">
-            <p>Nome:Laky - Idade:1.5Anos</p>
-        </div>
-        <div class="img-container">
-            <img src="fotos/primeira/4.png" alt="" id="blur">
-            <p> Nome:Any - Idade:4Meses</p>
-        </div>
-        <div class="img-container">
-            <img src="fotos/primeira/5.jfif" alt="" id="blur">
-            <p>Nome:Janis - Idade:7Meses</p>
-        </div>
-        <div class="img-container">
-            <img src="fotos/primeira/6.jpg" alt="" id="blur">
-            <p>Nome:Biche - Idade:2Anos</p>
-        </div>
-       
+@foreach( $animals as $animal )
+    <div class="img-container">
+        <img src="{{ asset($animal->foto->first()->caminho) }}" alt="" id="blur" >
+        <p >{{ $animal->nome_animal }} -  {{ $animal->idade_animal }} </p>
+    </div>
+@endforeach
     </section>
-
    
 
 
