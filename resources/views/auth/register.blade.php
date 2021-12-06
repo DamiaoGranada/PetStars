@@ -146,13 +146,12 @@
 			    				</div>
 			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
-<<<<<<< HEAD
+
 									<label for="password" class="text-info">Password:</label><br>
 			    						<input type="password" name="password" id="password" class="form-control input-sm @error('password') is-valid @enderror">
-=======
 									<label for="password" class="">Password:</label><br>
 			    						<input type="password" name="password" id="password" class="form-control input-sm @error('password') is-valid @enderror" value="{{old('password')}}" required autocomplete="password" autofocus placeholder="Ex: Pedro">
->>>>>>> 15e43b457833ae399b57cc3cb364aa16fc9858a3
+
                                         @error("password")
 
                                         <span class="text-danger" role="alert">
