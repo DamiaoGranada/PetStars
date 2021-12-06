@@ -35,11 +35,6 @@ Route::get('/login', [PageController::class,'login'])->name('login');
 
 
 
-
-
-
-
-
 Route::get('/contactos', [PageController::class,'contactos'])->name('gm.contactos');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
