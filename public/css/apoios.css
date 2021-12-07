@@ -16,8 +16,7 @@ h1{
 .cartao{
     border: 2px solid grey;
     border-radius: 25px;
-    width: 300px;
-    height: 300px;
+    width: 100%;
     
 }
 
@@ -37,46 +36,6 @@ h1{
     height: 80px;
     background-color: #9b9f9d;
 }
-/*PEDIGREE*/
-.imgpatro_pedigree{
-    text-align: center;
-    border-top-left-radius: 23px;
-    border-top-right-radius: 23px;
-    height: 80px;
-    background-color: #3157a3;
-}
-/*ROYAL CANIN*/
-.imgpatro_royal{
-    text-align: center;
-    border-top-left-radius: 23px;
-    border-top-right-radius: 23px;
-    height: 80px;
-    background-color: #f9e62b;
-}
-/*PURINA*/
-.imgpatro_purina{
-    text-align: center;
-    border-top-left-radius: 23px;
-    border-top-right-radius: 23px;
-    height: 80px;
-    background-color: #e61636;
-}
-/*FELIX*/
-.imgpatro_felix{
-    text-align: center;
-    border-top-left-radius: 23px;
-    border-top-right-radius: 23px;
-    height: 80px;
-    background-color: #0073a9;
-}
-/*PROPLAN*/
-.imgpatro_proplan{
-    text-align: center;
-    border-top-left-radius: 23px;
-    border-top-right-radius: 23px;
-    height: 80px;
-    background-color: goldenrod;
-}
 
 .nomepatro{
     text-align: center;
@@ -95,12 +54,4 @@ h1{
     text-align: center;
 }
 
-
-@media (max-width:769px){
-
-    .col-md-4{
-        margin-bottom: 30px;
-    }
-
-}
 
