@@ -107,7 +107,7 @@
           </div>
         </div>
       </li>
-
+<!-- Zona de Apoios-->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseApoios" aria-expanded="false"
           aria-controls="collapseApoios">
@@ -117,9 +117,9 @@
         <div id="collapseApoios" class="collapse"  data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Categories:</h6>
-            <a class="collapse-item" href="">Lista de Apoios</a>
+            <a class="collapse-item" href="#">Lista de Apoios</a>
 
-            <a class="collapse-item" href="">Adicionar Apoios</a>
+            <a class="collapse-item" href="#">Adicionar Apoios</a>
             
           </div>
           
