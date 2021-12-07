@@ -13,7 +13,7 @@
 			<form method="POST" action="{{route('users.update',$user)}}" class="form-group" enctype="multipart/form-data">
 				@csrf
 				@method("PUT")
-				@include('users.partials.add-edit')
+				@include('animais.partials.add-edit')
 				<div class="form-group">
 					<button type="submit" class="btn btn-success" name="ok">Save</button>
 

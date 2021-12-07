@@ -102,7 +102,8 @@
         <div id="collapseAnimais" class="collapse"  data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Categories:</h6>
-            <a class="collapse-item" href="">Inserir Animais</a>
+            <a class="collapse-item" href="">List Categories</a>
+            <a class="collapse-item" href="">Add Category</a>
             
           </div>
         </div>
