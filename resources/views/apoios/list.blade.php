@@ -62,7 +62,7 @@
 						  @foreach($apoios as $apoio)
 							<tr>
 							  <td>
-							  @if ($apoios->caminho_apoio)
+							  @if ($apoio->caminho_apoio)
 							  	
 							  
 
