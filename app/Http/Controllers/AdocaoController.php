@@ -14,10 +14,31 @@ class AdocaoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+
+
+
+    public function index(equest $request)
     {
-        return view("animal");
+        if (count($request->all()) == 0) {
+            $animals = Animal::all();
+        } else {
+            $animals = Animal::query();
+            if ($request->filled('nome_animal')) {
+                $animals->where('nome_animal', 'like', '%' . $request->nome_animal . '%');
+            }
+            if ($request->filled('descricao_animal')) {
+                $animals->where('descricao_animal', 'like', '%' . $request->descricao_animal . '%');
+            }
+            if ($request->filled('genero')) {
+                $animals->where('genero', $request->genero);
+            }
+            $animals=$animals->get();
+        }
+        return view('animais.list', compact('animals'));
+
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +47,8 @@ class AdocaoController extends Controller
      */
     public function create()
     {
-        //
+        $animal = new User;
+        return view('animals.add', compact('animal'));
     }
 
     /**
