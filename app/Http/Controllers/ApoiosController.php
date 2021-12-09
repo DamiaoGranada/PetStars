@@ -12,9 +12,24 @@ class ApoiosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view("apoio");
+        if (count($request->all()) == 0) {
+            $apoios = Apoios::all();
+        } else {
+            $apoios = Apoios::query();
+            if ($request->filled('id')) {
+                $apoios->where('id', 'like', '%' . $request->id . '%');
+            }
+            if ($request->filled('nome_apoio')) {
+                $apoios->where('nome_apoio', 'like', '%' . $request->nome_apoio . '%');
+            }
+            if ($request->filled('decri_apoio')) {
+                $apoios->where('decri_apoio', $request->decri_apoio);
+            }
+            $apoios=$apoios->get();
+        }
+        return view('apoios.list', compact('apoios'));
     }
 
     /**
