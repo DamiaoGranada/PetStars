@@ -8,7 +8,7 @@
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			<a class="btn btn-primary" href="{{route('animals.create')}}">
+			<a class="btn btn-primary" href="{{route('adocao.create')}}">
 				<i class="fas fa-plus"></i> Add Animal
 			</a>
         </div>
@@ -17,7 +17,7 @@
 		
 			<div class="row">
 				<div class="col-md-2" style="border:1px solid #dee2e6;">
-					<form method="GET" action="{{route('animals.index')}}" class="form-group">
+					<form method="GET" action="{{route('adocao.index')}}" class="form-group">
 
 
 						<div class="form-group">
@@ -74,9 +74,9 @@
  							   <td>{{$animal->descricao_animal}}</td>
  							   <td>{{$animal->genero}}</td>
 							  <td nowrap>
-								<a class="btn btn-xs btn-primary btn-p" href="{{route('animals.show',$animal)}}"><i class="fas fa-eye fa-xs"></i></a>
-							  <a class="btn btn-xs btn-warning btn-p" href="{{route('animals.edit',$animal)}}"><i class="fas fa-pen fa-xs"></i></a>
-								<form method="POST" action="{{route('animals.destroy',$animal)}}" role="form" class="inline"
+								<a class="btn btn-xs btn-primary btn-p" href="{{route('adocao.show',$animal)}}"><i class="fas fa-eye fa-xs"></i></a>
+							  <a class="btn btn-xs btn-warning btn-p" href="{{route('adocao.edit',$animal)}}"><i class="fas fa-pen fa-xs"></i></a>
+								<form method="POST" action="{{route('adocao.destroy',$animal)}}" role="form" class="inline"
 								onsubmit="return confirm('Are you sure you want to delete this record?');">
 								@csrf
 								@method('DELETE')

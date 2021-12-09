@@ -18,7 +18,7 @@ class AdocaoController extends Controller
 
 
 
-    public function index(equest $request)
+    public function index(Request $request)
     {
         if (count($request->all()) == 0) {
             $animals = Animal::all();
