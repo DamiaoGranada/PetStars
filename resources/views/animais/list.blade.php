@@ -3,44 +3,44 @@
 @section("content")
 <div class="container-fluid">
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Users</h1>
+    <h1 class="h3 mb-2 text-gray-800">animals</h1>
 
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			<a class="btn btn-primary" href="{{route('users.create')}}">
-				<i class="fas fa-plus"></i> Add User
+			<a class="btn btn-primary" href="{{route('animals.create')}}">
+				<i class="fas fa-plus"></i> Add Animal
 			</a>
         </div>
         <div class="card-body">
-		@if (count($users))
+		@if (count($animals))
 		
 			<div class="row">
 				<div class="col-md-2" style="border:1px solid #dee2e6;">
-					<form method="GET" action="{{route('users.index')}}" class="form-group">
+					<form method="GET" action="{{route('animals.index')}}" class="form-group">
 
 
 						<div class="form-group">
-							<label for="inputName">Name</label>
-							<input type="text" class="form-control" name="name" id="inputName"
+							<label for="inputName">Nome</label>
+							<input type="text" class="form-control" name="nome_animal" id="inputName"
 								value="{{request()->get('name')}}" />
 						</div>
 						<div class="form-group">
-							<label for="inputEmail">Email</label>
-							<input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email address"
+							<label for="inputEmail">Descricão</label>
+							<input type="email" class="form-control" name="descricao_animal" id="inputEmail" 
 								value="{{request()->get('email')}}" />
 						</div>
-						<label for="inputRole">Role</label>
-						<select name="role" id="inputRole" class="form-control">
-							<option value="">All</option>
-							<option {{(request()->get('role')=='A')?"selected":""}} value="A">Admin</option>
-							<option {{(request()->get('role')=='N')?"selected":""}} value="N">Normal</option>
+						<label for="inputRole">Genero</label>
+						<select name="genero" id="inputRole" class="form-control">
+							<option value="">Todos</option>
+							<option {{(request()->get('role')=='F')?"selected":""}} value="F">Femenino</option>
+							<option {{(request()->get('role')=='M')?"selected":""}} value="M">Masculino</option>
 
 						</select>
 					  
 						<br>
 						<div class="form-group">
-							<button type="submit" class="btn btn-success">Search</button>
+							<button type="submit" class="btn btn-success">Pesquisar</button>
 						</div>
 
 					</form>
@@ -53,29 +53,30 @@
 						  <thead>
 							<tr>
 							  <th>Photo</th>
-							  <th>Name</th>
-							  <th>Email</th>
-							  <th>Role</th>
+							  <th>Nome</th>
+							  <th>Descricão</th>
+							  <th>Genero</th>
 							  <th>Actions</th>
 							</tr>
 						  </thead>
 						  <tbody>
-						  @foreach($users as $user)
+						  @foreach($animals as $animal)
 							<tr>
 							  <td>
-							  @if ($user->photo)
- 
-							  	<img src="{{asset('storage/users_photos/'.$user->photo)}}" class="img-post" alt="User photo">
+							  @if ($animal->photo)
+							  	
+							  
+
 							  @else
- 								<img src="{{asset('img/default_user.jpg')}}" class="img-post" alt="User photo">
+ 								<img src="{{ asset($animal->foto->first()->caminho) }}" class="img-post" alt="animal photo">
  							  @endif</td>
-							   <td>{{$user->name}}</td>
- 							   <td>{{$user->email}}</td>
- 							   <td>{{$user->roleToStr()}}</td>
+							   <td>{{$animal->nome_animal}}</td>
+ 							   <td>{{$animal->descricao_animal}}</td>
+ 							   <td>{{$animal->genero}}</td>
 							  <td nowrap>
-								<a class="btn btn-xs btn-primary btn-p" href="{{route('users.show',$user)}}"><i class="fas fa-eye fa-xs"></i></a>
-							  <a class="btn btn-xs btn-warning btn-p" href="{{route('users.edit',$user)}}"><i class="fas fa-pen fa-xs"></i></a>
-								<form method="POST" action="{{route('users.destroy',$user)}}" role="form" class="inline"
+								<a class="btn btn-xs btn-primary btn-p" href="{{route('animals.show',$animal)}}"><i class="fas fa-eye fa-xs"></i></a>
+							  <a class="btn btn-xs btn-warning btn-p" href="{{route('animals.edit',$animal)}}"><i class="fas fa-pen fa-xs"></i></a>
+								<form method="POST" action="{{route('animals.destroy',$animal)}}" role="form" class="inline"
 								onsubmit="return confirm('Are you sure you want to delete this record?');">
 								@csrf
 								@method('DELETE')
@@ -83,20 +84,7 @@
 									<button type="submit" class="btn btn-xs btn-danger btn-p"><i class="fas fa-trash fa-xs"></i></button>
 								</form>
 							  </td>
-							</tr>
-							<tr>
-							  <td><img src="img\default_user.jpg" class="img-post" alt="User photo"></td>
-							  <td>Joana Marques</td>
-							  <td>joana.mar@gmail.com</td>
-							  <td>Normal</td>
-							  <td nowrap>
-								<a class="btn btn-xs btn-primary btn-p" href="#"><i class="fas fa-eye fa-xs"></i></a>
-							  <a class="btn btn-xs btn-warning btn-p" href="#"><i class="fas fa-pen fa-xs"></i></a>
-								<form method="POST" action="#" role="form" class="inline">
-									<button type="submit" class="btn btn-xs btn-danger btn-p"><i class="fas fa-trash fa-xs"></i></button>
-								</form>
-							  </td>
-							</tr>
+							
 							@endforeach				
 						  </tbody>
 
