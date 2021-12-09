@@ -9,7 +9,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AdocaoController;
 use App\Http\Controllers\EventosController;
 use App\Http\Controllers\ApoiosController;
-use App\Http\Controllers\AnimalController;
+
 
 
 use App\Models\User;
