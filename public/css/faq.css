@@ -20,13 +20,13 @@
 .faq .faq-list .question {
     display: block;
     position: relative;
-    font-family: #e43c5c;
+    font-family: #ff7847;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
     padding-left: 25px;
     cursor: pointer;
-    color: #d01d3f;
+    color: #ff7847;
     transition: 0.3s;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .faq .faq-list .collapsed:hover {
-    color: #e43c5c;
+    color: #ff7847;
 }
 
 .faq .faq-list .collapsed .icon-show {

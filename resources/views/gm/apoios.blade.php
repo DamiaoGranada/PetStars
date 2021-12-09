@@ -17,16 +17,16 @@
 
     <div class="row">
     @foreach($apoios as $apoio)
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="cartao">
                     <div class="imgpatro_arcana">
-                        <img src="{{ asset($apoio->first()->caminho_apoio) }}" alt="Patrocinio">
+                        <img src="{{ asset($apoio->caminho_apoio) }}" alt="Patrocinio">
                     </div>
                     <div class="nomepatro">
                     {{ $apoio->nome_apoio }}
                     </div>
                     <div class="despatro">
-                    A marca Acana está sob o patrocínio da Champions Petfoods, uma fabricante canadense premiada e de grande reputação. Fabrica ração biologicamente adequada com Ingredientes Regionais Frescos.
+                    {{ $apoio->descri_apoio }}
                     </div>
                     
                 </div>
