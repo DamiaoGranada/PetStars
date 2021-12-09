@@ -1,27 +1,18 @@
 
 <div class="form-group">
-    <label for="inputFullname">Name</label>
+    <label for="inputFullname">Nome do Apoio</label>
     <input type="text" class="form-control" name="name" id="inputFullname" value="{{old('name',$user->name)}}" />
 </div>
 
 <div class="form-group">
-    <label for="inputEmail">Email</label>
+    <label for="inputEmail">Descrição do Apoio</label>
     <input type="text" class="form-control" name="email" id="inputEmail" placeholder="exemplo@gmail.com"
         value="{{old('email',$user->email)}}" />
 </div>
 
 <div class="form-group">
-    <label for="inputPhoto">Photo</label>
-    <input type="file" class="form-control-file" name="photo" id="inputPhoto" aria-describedby="fileHelp" />
-    <small id="fileHelp" class="form-text text-muted"> Please upload a valid file image. Size of image should not be
-        more than 2MB </small>
+   <label for="exampleFormControlFile1">Foto do Apoio</label>
+	<input type="file" class="form-control-file" id="exampleFormControlFile1">
 </div>
 
-<div class="form-group">
-    <label for="inputRole">Role</label>
-    <select name="role" id="inputRole" class="form-control">
-    <option {{old('role',$user->role)=='A'?"selected":""}} value="A" >Admin</option>
-    <option {{old('role',$user->role)=='N'?"selected":""}} value="N" >Normal</option>
-       
-    </select>
-</div>
+
