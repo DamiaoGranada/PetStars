@@ -38,7 +38,7 @@ class AdocaoController extends Controller
         return view('animais.list', compact('animals'));
 
     }
-    
+
 
     /**
      * Show the form for creating a new resource.
@@ -47,8 +47,8 @@ class AdocaoController extends Controller
      */
     public function create()
     {
-        $animal = new User;
-        return view('animals.add', compact('animal'));
+        $animal = new animal;
+        return view('animais.add', compact('animal'));
     }
 
     /**

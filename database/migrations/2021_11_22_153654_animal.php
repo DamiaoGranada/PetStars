@@ -15,7 +15,7 @@ class Animal extends Migration
     {
         Schema::create('animal', function (Blueprint $table) {
             $table->id()->nullable(false);
-            $table->string('pelagem', 25)->nullable(false);
+            $table->string('pelagem', 25)->nullable();
             $table->string('nome_animal', 25)->nullable(false);
             $table->char('descricao_animal')->nullable(false);
             $table->date('data_acolhimento')->nullable(false);

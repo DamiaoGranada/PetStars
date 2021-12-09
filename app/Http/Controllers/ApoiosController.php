@@ -39,7 +39,7 @@ class ApoiosController extends Controller
      */
     public function create()
     {
-        //  
+        //
     }
 
     /**

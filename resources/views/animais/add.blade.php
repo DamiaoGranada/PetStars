@@ -10,14 +10,14 @@
 			Add Animal
         </div>
         <div class="card-body">
-		
-		<form method="POST" action="{{route('apoios.store')}}" class="form-group" enctype="multipart/form-data">
+
+		<form method="POST" action="{{route('adocao.store')}}" class="form-group" enctype="multipart/form-data">
 			@csrf
 			@include('animais.partials.add-edit')
 
 			<div class="form-group">
 				<button type="submit" class="btn btn-success" name="ok">Save</button>
-				<a href="{{route('apoios.index')}}" class="btn btn-default">Cancel</a>
+				<a href="{{route('adocao.index')}}" class="btn btn-default">Cancel</a>
 			</div>
 		</form>
 		</div>
