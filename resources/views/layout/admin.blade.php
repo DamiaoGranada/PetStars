@@ -102,8 +102,8 @@
         <div id="collapseAnimais" class="collapse"  data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Categories:</h6>
-            <a class="collapse-item" href="">List Categories</a>
-            <a class="collapse-item" href="">Add Category</a>
+            <a class="collapse-item" href="{{route('animals.index')}}">List Categories</a>
+            <a class="collapse-item" href="{{route('animals.create')}}">Add Category</a>
             
           </div>
         </div>
