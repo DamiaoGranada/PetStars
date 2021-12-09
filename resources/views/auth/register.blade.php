@@ -20,10 +20,7 @@
             <div class="vazio"></div>
         <div class="container">
           
-<<<<<<< HEAD
-=======
         
->>>>>>> a848bad34825bd65bab3ff67cda57c25c279ef77
 
 
         <form action="{{route('register')}}" method="post" class="form">
@@ -40,11 +37,7 @@
 
 									<label for="name" class="">Nome:</label><br>
 
-<<<<<<< HEAD
-			               			<input type="text" name="name" id="first_name" class="form-control input-sm @error('name') is-valid @enderror" value="{{old('name')}}" required autocomplete="name" autofocus placeholder="Isabel">
-=======
 			               			<input type="text" name="name" id="first_name" class="form-control input-sm @error('name') is-valid @enderror" value="{{old('name')}}" required autocomplete="name" >
->>>>>>> a848bad34825bd65bab3ff67cda57c25c279ef77
 
                                        @error("name")
 
@@ -57,11 +50,7 @@
 			    				<div class="col-xs-6 col-sm-6 col-md-6">
 			    					<div class="form-group">
 									<label for="apelido" class="">Apelido:</label><br>
-<<<<<<< HEAD
-			    					<input type="text" name="apelido" id="last_name" class="form-control input-sm @error('apelido') is-valid @enderror" value="{{old('apelido')}}" required autocomplete="apelido" autofocus placeholder="Almeida">
-=======
 			    					<input type="text" name="apelido" id="last_name" class="form-control input-sm @error('apelido') is-valid @enderror" value="{{old('apelido')}}" required autocomplete="apelido" >
->>>>>>> a848bad34825bd65bab3ff67cda57c25c279ef77
                                     @error("apelido")
 
                                     <span class="text-danger" role="alert">
@@ -73,11 +62,7 @@
 			    			</div>
                             <div class="form-group">
 								<label for="localidade" class="">Localidade:</label><br>
-<<<<<<< HEAD
-			    				<input type="text" name="localidade" id="localidade" class="form-control input-sm @error('localidade') is-valid @enderror" value="{{old('localidade')}}" required autocomplete="localidade" autofocus placeholder="Leiria">
-=======
 			    				<input type="text" name="localidade" id="localidade" class="form-control input-sm @error('localidade') is-valid @enderror" value="{{old('localidade')}}" required autocomplete="localidade" >
->>>>>>> a848bad34825bd65bab3ff67cda57c25c279ef77
                                 @error("localidade")
 
                                 <span class="text-danger" role="alert">
@@ -87,11 +72,7 @@
                             </div>
 							<div class="form-group">
 									<label for="rua" class="">Rua:</label><br>
-<<<<<<< HEAD
-			    				    <input type="text" name="rua" id="rua" class="form-control input-sm @error('rua') is-valid @enderror" value="{{old('rua')}}" required autocomplete="rua" autofocus placeholder="Rua D.Afonso Henriques">
-=======
 			    				    <input type="text" name="rua" id="rua" class="form-control input-sm @error('rua') is-valid @enderror" value="{{old('rua')}}" required autocomplete="rua" >
->>>>>>> a848bad34825bd65bab3ff67cda57c25c279ef77
                                     @error("rua")
 
                                     <span class="text-danger" role="alert">
@@ -106,11 +87,7 @@
 								<div class="col-xs-12 col-sm-12 col-md-12">
                                         <div class="form-group">
 										<label for="nif" class="">Nif:</label><br>
-<<<<<<< HEAD
-			    						<input type="text" name="nif" id="nif" class="form-control input-sm @error('nif') is-valid @enderror" value="{{old('nif')}}" required autocomplete="nif" autofocus placeholder="202303101">
-=======
 			    						<input type="text" name="nif" id="nif" class="form-control input-sm @error('nif') is-valid @enderror" value="{{old('nif')}}" required autocomplete="nif" >
->>>>>>> a848bad34825bd65bab3ff67cda57c25c279ef77
                                         @error("nif")
 
                                         <span class="text-danger" role="alert">
@@ -127,11 +104,7 @@
                                     <div class="col-xs-6 col-sm-6 col-md-6">
 										 <div class="form-group">
 										 <label for="telefone" class="">Telefone:</label><br>
-<<<<<<< HEAD
-			    				<input type="number" name="telefone" id="telefone" class="form-control input-sm @error('telefone') is-valid @enderror" value="{{old('telefone')}}" required autocomplete="telefone" autofocus placeholder="Ex: 919191919">
-=======
 			    				<input type="number" name="telefone" id="telefone" class="form-control input-sm @error('telefone') is-valid @enderror" value="{{old('telefone')}}" required autocomplete="telefone" >
->>>>>>> a848bad34825bd65bab3ff67cda57c25c279ef77
                                 @error("telefone")
 
                                 <span class="text-danger" role="alert">
@@ -145,11 +118,7 @@
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <div class="form-group">
 										<label for="cod_postl" class="">Codigo Postal:</label><br>
-<<<<<<< HEAD
-			    				        <input type="text" name="cod_postal" id="cod_postal" class="form-control input-sm @error('cod_postal') is-valid @enderror" value="{{old('cod_postal')}}" required autocomplete="cod_postal" autofocus placeholder="Ex: 2480-000">
-=======
 			    				        <input type="text" name="cod_postal" id="cod_postal" class="form-control input-sm @error('cod_postal') is-valid @enderror" value="{{old('cod_postal')}}" required autocomplete="cod_postal" >
->>>>>>> a848bad34825bd65bab3ff67cda57c25c279ef77
                                         @error("cod_postal")
 
                                         <span class="text-danger" role="alert">
@@ -166,11 +135,7 @@
 			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
 										<label for="email" class="">Email:</label><br>
-<<<<<<< HEAD
-			    						<input type="text" name="email" id="login" class="form-control input-sm @error('email') is-valid @enderror" value="{{old('email')}}" required autocomplete="email" autofocus placeholder="Ex: email@petstars.pt">
-=======
 			    						<input type="text" name="email" id="login" class="form-control input-sm @error('email') is-valid @enderror" required>
->>>>>>> a848bad34825bd65bab3ff67cda57c25c279ef77
                                         @error("email")
 
                                         <span class="text-danger" role="alert">
@@ -182,15 +147,9 @@
 			    				<div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
 
-<<<<<<< HEAD
-									
-									<label for="password" class="">Password:</label><br>
-			    						<input type="password" name="password" id="password" class="form-control input-sm @error('password') is-valid @enderror" value="{{old('password')}}" required >
-=======
 								
 									<label for="password" class="">Password:</label><br>
 			    						<input type="password" name="password" id="password" class="form-control input-sm @error('password') is-valid @enderror"  required >
->>>>>>> a848bad34825bd65bab3ff67cda57c25c279ef77
 
                                         @error("password")
 
