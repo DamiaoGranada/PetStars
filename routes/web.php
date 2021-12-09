@@ -46,7 +46,7 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth', 'verified']], function
     Route::get('/users/{user}/send_reactivate_mail',
     [UserController::class,'send_reactivate_email'])->name('users.sendActivationEmail');
     Route::resource('posts',PostController::class);
-    Route::resource('animals',AnimalController::class);
+    Route::resource('adocao',AdocaoController::class);
     Route::resource('apoios',ApoiosController::class);
     Route::resource('categories',CategoryController::class);
     Route::resource('users',UserController::class);
