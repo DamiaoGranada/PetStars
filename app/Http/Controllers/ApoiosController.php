@@ -24,8 +24,8 @@ class ApoiosController extends Controller
             if ($request->filled('nome_apoio')) {
                 $apoios->where('nome_apoio', 'like', '%' . $request->nome_apoio . '%');
             }
-            if ($request->filled('decri_apoio')) {
-                $apoios->where('decri_apoio', $request->decri_apoio);
+            if ($request->filled('descri_apoio')) {
+                $apoios->where('descri_apoio', 'like', '%' . $request->descri_apoio . '%');
             }
             $apoios=$apoios->get();
         }
@@ -39,7 +39,7 @@ class ApoiosController extends Controller
      */
     public function create()
     {
-        //
+        //  
     }
 
     /**

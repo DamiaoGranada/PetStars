@@ -21,19 +21,19 @@
 
 
 						<div class="form-group">
-							<label for="inputName">Nome</label>
+							<label for="inputName">Id</label>
 							<input type="text" class="form-control" name="id" id="inputName"
 								value="{{request()->get('id')}}" />
 						</div>
 						<div class="form-group">
-							<label for="inputEmail">Descricão</label>
+							<label for="inputEmail">Nome</label>
 							<input type="text" class="form-control" name="nome_apoio" id="inputEmail" 
 								value="{{request()->get('nome_apoio')}}" />
 						</div>
 						<div class="form-group">
 							<label for="inputEmail">Descricão</label>
-							<input type="text" class="form-control" name="decri_apoio" id="inputEmail" 
-								value="{{request()->get('decri_apoio')}}" />
+							<input type="text" class="form-control" name="descri_apoio" id="inputEmail" 
+								value="{{request()->get('descri_apoio')}}" />
 						</div>
 						
 					  
@@ -62,7 +62,7 @@
 						  @foreach($apoios as $apoio)
 							<tr>
 							  <td>
-							  @if ($apoio->caminho_apoio)
+							  @if ($apoio->photo)
 							  	
 							  
 
@@ -71,7 +71,7 @@
  							  @endif</td>
 							   <td>{{$apoio->id}}</td>
  							   <td>{{$apoio->nome_apoio}}</td>
- 							   <td>{{$apoio->decri_apoio}}</td>
+ 							   <td>{{$apoio->descri_apoio}}</td>
 							  <td nowrap>
 								<a class="btn btn-xs btn-primary btn-p" href="{{route('apoios.show',$apoio)}}"><i class="fas fa-eye fa-xs"></i></a>
 							  <a class="btn btn-xs btn-warning btn-p" href="{{route('apoios.edit',$apoio)}}"><i class="fas fa-pen fa-xs"></i></a>
