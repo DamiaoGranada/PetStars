@@ -50,7 +50,7 @@ class ApoiosController extends Controller
      */
     public function store(Request $request)
     {
-        $apoio= new Apoio();
+        $apoio= new Apoios();
         $apoio->nome_apoio =$request->input('nome_apoio');
         $apoio->descri_apoio =$request->input('descri_apoio');
         $apoio->caminho_apoio =$request->input('caminho_apoio');
