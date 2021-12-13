@@ -7,17 +7,17 @@
 
      <div class="card shadow mb-4">
         <div class="card-header py-3">
-			Add Animal
+			Adicionar novo apoio
         </div>
         <div class="card-body">
 		
 		<form method="POST" action="{{route('apoios.store')}}" class="form-group" enctype="multipart/form-data">
 			@csrf
-			@include('animais.partials.add-edit')
+			@include('apoios.partials.add-edit')
 
 			<div class="form-group">
-				<button type="submit" class="btn btn-success" name="ok">Save</button>
-				<a href="{{route('apoios.index')}}" class="btn btn-default">Cancel</a>
+				<button type="submit" class="btn btn-success" name="ok">Adicionar</button>
+				<a href="{{route('apoios.index')}}" class="btn btn-default">Cancelar</a>
 			</div>
 		</form>
 		</div>

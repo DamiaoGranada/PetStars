@@ -38,10 +38,10 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-gamepad"></i>
+          
 
         </div>
-        <div class="sidebar-brand-text mx-3">Games and Multimedia</div>
+        <div class="sidebar-brand-text mx-3">PetStars</div>
       </a>
 
       <!-- Divider -->
@@ -117,7 +117,7 @@
         </a>
         <div id="collapseApoios" class="collapse"  data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Categories:</h6>
+            <h6 class="collapse-header">Categorias:</h6>
             <a class="collapse-item" href="{{route('apoios.index')}}">Lista de Apoios</a>
 
             <a class="collapse-item" href="{{route('apoios.create')}}">Adicionar Apoios</a>
@@ -214,7 +214,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Games and Multimedia 2019</span>
+            <span>Copyright &copy; PetStars 2021</span>
           </div>
         </div>
       </footer>

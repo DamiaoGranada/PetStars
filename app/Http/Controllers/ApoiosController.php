@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\Apoios;
+use App\Http\Requests\ApoiosRequest;
+use App\Http\Requests\UpdateApoiosRequest;
+
 
 use Illuminate\Http\Request;
 
@@ -27,6 +30,10 @@ class ApoiosController extends Controller
             if ($request->filled('descri_apoio')) {
                 $apoios->where('descri_apoio', 'like', '%' . $request->descri_apoio . '%');
             }
+
+            if ($request->filled('caminho_apoio')) {
+                $apoios->where('caminho_apoio', 'like', '%' . $request->caminho_apoio . '%');
+            }
             $apoios=$apoios->get();
         }
         return view('apoios.list', compact('apoios'));
@@ -39,7 +46,8 @@ class ApoiosController extends Controller
      */
     public function create()
     {
-        //
+        $apoio = new apoios;
+        return view('apoios.add', compact('apoio'));
     }
 
     /**
@@ -48,16 +56,16 @@ class ApoiosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ApoiosRequest $request)
     {
-        $apoio= new Apoio();
+        $apoio= new Apoios();
         $apoio->nome_apoio =$request->input('nome_apoio');
         $apoio->descri_apoio =$request->input('descri_apoio');
         $apoio->caminho_apoio =$request->input('caminho_apoio');
 
-
         $apoio->save();
-        return view('apoio')->with('apoio',$apoio);
+        return view('apoios.add',compact('apoio'));
+
     }
 
     public function display()
@@ -72,9 +80,10 @@ class ApoiosController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Apoios $post)
+    public function show(Apoios $apoio)
     {
-        //
+        return view('apoios.show',compact("apoio"));
+
     }
 
     /**
@@ -83,9 +92,10 @@ class ApoiosController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Apoios $post)
+    public function edit(Apoios $apoio)
     {
-        //
+        return view('apoios.edit', compact('apoio'));
+
     }
 
     /**
@@ -95,10 +105,21 @@ class ApoiosController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Apoios $post)
+    public function update(UpdateApoiosRequest $request, Apoios $apoio)
     {
-        //
+        $fields = $request->validated();
+            $apoio->fill($fields);
+                if ($request->hasFile('apoio_caminho')) {
+                    if (!empty($apoios->apoio_caminho)) {
+                        Storage::disk('public')->delete('fotos/apoios/' . $apoio->apoio_caminho);
+                    }
+            $photo_path = $request->file('apoio_caminho')->store('public/fotos/apoios/');
+            $apoio->photo = basename($photo_path);
+                }
+                $apoio->save();
+                return redirect()->route('apoios.index')->with('success', 'User successfully updated');
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -106,8 +127,10 @@ class ApoiosController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Apoios $post)
+    /*public function destroy(Apoios $apoio)
     {
-        //
-    }
+        $apoio->delete();
+        return redirect()->route('apoio.destroy')->with('success', 'User successfully deleted');
+           
+    }*/
 }
