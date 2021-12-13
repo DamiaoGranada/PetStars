@@ -9,7 +9,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AdocaoController;
 use App\Http\Controllers\EventosController;
 use App\Http\Controllers\ApoiosController;
-
+use App\Http\Controllers\FqsController;
 
 
 use App\Models\User;
@@ -32,7 +32,7 @@ Route::get('/apoios', [ApoiosController::class,'display'])->name('gm.apoios');
 
 Route::get('/adocao', [AdocaoController::class,'display'])->name('gm.adocao');
 
-Route::get('/faq', [PageController::class,'faq'])->name('gm.faq');
+Route::get('/faq', [FqsController::class,'display'])->name('gm.faq');
 
 Route::get('/login', [PageController::class,'login'])->name('login');
 
