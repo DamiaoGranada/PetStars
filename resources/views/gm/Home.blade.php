@@ -102,10 +102,10 @@ Home
 
        <div class="  col-12 col-md-6 ">
 
-        <h3>{{ $eventos->nome_evento }}</h3>
-        <p>{{ $eventos->descri_evento }}</p>
-        <p>{{ $eventos->data_evento }} | {{ $eventos->local_evento }}  </p>
-        <p>{{ $eventos->tipo_evento }}</p>
+        <h3  class=" title3 " >{{ $eventos->nome_evento }}</h3>
+        <p class=" texto ">{{ $eventos->descri_evento }}</p>
+        <p class=" texto ">{{ $eventos->data_evento }} | {{ $eventos->local_evento }}  </p>
+        <p class=" texto ">{{ $eventos->tipo_evento }}</p>
      
        </div>
   

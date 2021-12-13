@@ -13,11 +13,10 @@ body {
 
   #login .container #login-row #login-column #login-box {
     margin-top: 50px;
-    max-width: 600px;
     border: 1px solid #9C9C9C;
     background-color: #ffce7b;
     margin-bottom: 30px;
-    border-radius: 5%;
+    border-radius: 10%;
   }
   #login .container #login-row #login-column #login-box #login-form {
     padding: 20px;

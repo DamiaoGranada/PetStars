@@ -14,9 +14,9 @@
         <img src="{{asset('img/logo.png')}}" alt="logo" id="logo"></div>
 </a>
 <div class="container">
-    <div id="login-row" class="row justify-content-center align-items-center">
-        <div id="login-column" class="col-md-6">
-            <div id="login-box" class="col-md-12">
+    <div id="login-row" class="row justify-content-center">
+        <div id="login-column" class="col">
+            <div id="login-box" class="col">
                 <form id="login-form" class="form" action="{{ route('login') }}" method="post">
                 @csrf
                     <h3 class="text-center texto">Login</h3>

@@ -3,7 +3,7 @@
 <nav class=" navbar navbar-expand-lg ">
   <a class=" navbar-brand" href="{{route('gm.Home')}}"><img id="navimg" src="img/Logotipo_Final.png"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"><img id="navimg" src="img/Logotipo_Final.png"></span>
+    <span class="navbar-toggler-icon"><img id="navimg" src="img/índice.png"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class=" navbar-nav row">
