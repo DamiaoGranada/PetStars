@@ -16,7 +16,15 @@ class CreateFaqTable extends Migration
         Schema::create('faq', function (Blueprint $table) {
             $table->id();
             $table->string('titulo',100)->nullable();
-            $table->string('Conteudo')->nullable();
+            $table->string('Conteudo1',700)->nullable();
+            $table->string('Conteudo2',700)->nullable();
+            $table->string('Conteudo3',700)->nullable();
+            $table->string('Conteudo4',700)->nullable();
+            $table->string('Conteudo5',700)->nullable();
+            $table->string('Conteudo6',700)->nullable();
+            $table->string('Conteudo7',700)->nullable();
+            $table->string('Conteudo8',700)->nullable();
+
             
         });
     }
