@@ -68,9 +68,11 @@ class AdocaoController extends Controller
         $animal->genero =$request->input('genero');
         $animal->local_animal =$request->input('local_animal');
 
+
         $animal->save();
         return view('animal')->with('animal',$animal);
     }
+    
 
     public function display()
     {

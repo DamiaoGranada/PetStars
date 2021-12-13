@@ -48,10 +48,11 @@
 
 
 
-
+<select class="form-group" name="foto">
 <div class="form-group">
    <label for="exampleFormControlFile1">Foto</label>
-	<input type="file" class="form-control-file" id="exampleFormControlFile1">
+	<input type="file" class="form-control-file" id="exampleFormControlFile1"  value="{{old('foto',$animal->foto->first()->caminho)}}">
 </div>
+</select>
 
 
