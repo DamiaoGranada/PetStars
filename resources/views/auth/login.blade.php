@@ -69,7 +69,7 @@
 
                             </div>
                             <div>
-                                <button onclick="window.location.href={{route('register')}}" class="btn btn-light">Registar</button>
+                                <button onclick="window.location.href='register'" class="btn btn-light">Registar</button>
 
                             </div>
 

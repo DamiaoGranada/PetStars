@@ -188,7 +188,7 @@
 							</div>-->
 							<div class="Voltar" style="margin-left:46%;">
                                <br>
-							   <button onclick="window.location.href={{route('login')}}" class="btn btn-light">Voltar</button>
+							   <button onclick="window.location.href='login'" class="btn btn-light">Voltar</button>
                             </div>
 							</div>
 

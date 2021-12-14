@@ -57,7 +57,7 @@ class RegisterController extends Controller
             'rua' => ['required', 'string', 'max:255'],
             'nif' => ['required', 'string', 'min:9', 'max:9'],
             'telefone' => ['required', 'string', 'min:9', 'max:9'],
-            'cod_postal' => ['required', 'string', 'min:7', 'max:7'],
+            'cod_postal' => ['required', 'string', 'min:8', 'max:8'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             
