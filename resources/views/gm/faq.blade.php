@@ -14,35 +14,17 @@
                 <h2>Perguntas Frequentes</h2>
                 <br>
             </div>
-            @foreach( $faq as $faqs )
+            @foreach( $faqs as $faq )
             <ul class="faq-list">
 
                
                 <li>
-                    <div data-toggle="collapse" class="collapsed question" href="#faq1">{{$faqs->titulo }} <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                    <div id="faq1"   class="collapse" data-bs-parent=".faq-list">
+                    <div data-toggle="collapse" class="collapsed question" href="#faq1">{{$faq->titulo }} <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
                         <p>
-                        {{$faqs->Conteudo1 }}
-                            <br> {{$faqs->Conteudo2 }}
-                            <br> {{$faqs->Conteudo3 }}
-                            <br><br>
-                            <ul>
-                                <li>
-                                {{$faqs->Conteudo4 }}
-                                </li>
-                                <li>
-                                {{$faqs->Conteudo5 }}
-                                </li>
-                                <li>
-                                {{$faqs->Conteudo6 }}
-                                </li>
-                                <li>
-                                {{$faqs->Conteudo7 }}
-                                </li>
-                                <li>
-                                {{$faqs->Conteudo8 }}
-                                </li>
-                            </ul>
+                        {{$faq->conteudo }}
+                    
+    
                         </p>
                     </div>
                 </li>
