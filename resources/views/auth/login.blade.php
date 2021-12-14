@@ -15,8 +15,8 @@
 </a>
 <div class="container">
     <div id="login-row" class="row justify-content-center">
-        <div id="login-column" class="col">
-            <div id="login-box" class="col">
+        <div id="login-column" class="col-md-6">
+            <div id="login-box" class="colmd-12">
                 <form id="login-form" class="form" action="{{ route('login') }}" method="post">
                 @csrf
                     <h3 class="text-center texto">Login</h3>
