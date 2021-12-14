@@ -45,7 +45,10 @@ class FqsController extends Controller
         $faqs= new Faq();
         $faqs->id =$request->input('id');
         $faqs->titulo =$request->input('titulo');
-        $faqs->conteudo =$request->input('conteudo');
+        $faqs->Conteudo =$request->input('conteudo');
+
+        $faqs->save();
+        return view('faq')->with('faq',$faqs);
     }
 
     public function display()

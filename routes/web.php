@@ -32,7 +32,7 @@ Route::get('/apoios', [ApoiosController::class,'display'])->name('gm.apoios');
 
 Route::get('/adocao', [AdocaoController::class,'display'])->name('gm.adocao');
 
-Route::get('/faq', [FqsController::class,'index'])->name('gm.faq');
+Route::get('/faq', [FqsController::class,'display'])->name('gm.faq');
 
 Route::get('/login', [PageController::class,'login'])->name('login');
 
