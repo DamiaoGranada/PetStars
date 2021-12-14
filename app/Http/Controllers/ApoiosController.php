@@ -117,7 +117,7 @@ class ApoiosController extends Controller
             $apoio->photo = basename($photo_path);
                 }
                 $apoio->save();
-                return redirect()->route('apoios.index')->with('success', 'User successfully updated');
+                return redirect()->route('apoios.index')->with('success', 'Atualização feita!');
     }
 
 
@@ -127,10 +127,9 @@ class ApoiosController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    /*public function destroy(Apoios $apoio)
+    public function destroy(Apoios $apoio)
     {
         $apoio->delete();
-        return redirect()->route('apoio.destroy')->with('success', 'User successfully deleted');
-           
-    }*/
+        return redirect()->route('apoios.index')->with('success', 'Apoio removido!');
+    }
 }

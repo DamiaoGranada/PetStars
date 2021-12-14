@@ -32,7 +32,7 @@
     <div class="thumb-content"><a href="{{route('gm.apoios')}}">Apoios</a></div>	
     </li>
     <li>
-    <div class="thumb-content"><a href="#">Loja</a></div>	
+    <div class="thumb-content"><a href="https://lojapetstars.g2.dwm22.space/2021/11/03/hello-world/">Loja</a></div>	
     </li>
     </ul>
     </div>
