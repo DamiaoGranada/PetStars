@@ -63,7 +63,18 @@ class ApoiosController extends Controller
         $apoio->descri_apoio =$request->input('descri_apoio');
         $apoio->caminho_apoio =$request->input('caminho_apoio');
 
-        $apoio->save();
+       
+
+        
+        if ($request->hasFile('apoios')) {
+            $photo_path = $request->file('foto')->store('public/apoios_fotos');
+            $apoios->caminho_apoio = basename($photo_path);
+            }
+       
+            
+         $apoio->save();
+
+        
         return view('apoios.add',compact('apoio'));
 
     }

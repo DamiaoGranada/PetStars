@@ -67,7 +67,7 @@
 							  
 
 							  @else
-							  <img src="{{ asset($apoio->caminho_apoio) }}">
+							  <img src="{{ $apoios->caminho_apoio->count() > 0 ? asset('/storage/apoios_fotos/' . $apoios->caminho_apoio->first()->caminho_apoio) : '/img/no-image.png' }}" class="img-post" alt="apoios photo">
  							  @endif</td>
 							   <td>{{$apoio->id}}</td>
  							   <td>{{$apoio->nome_apoio}}</td>
