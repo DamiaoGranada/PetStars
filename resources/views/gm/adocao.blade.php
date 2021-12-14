@@ -23,12 +23,14 @@
 
 <div class="vazio"></div>
 <section class="container">
+    @if($animals)
 @foreach( $animals as $animal )
     <div class="img-container">
-        <img src="{{ asset($animal->foto->first()->caminho) }}" alt="" id="blur" >
+    <img src="{{ $animal->foto->count() > 0 ? asset('/storage/animais_fotos/' . $animal->foto->first()->caminho) : '/img/no-image.png' }}" class="img-post" alt="animal photo" id="blur" >
         <p >{{ $animal->nome_animal }} -  {{ $animal->idade_animal }} </p>
     </div>
 @endforeach
+@endif
     </section>
    
 
