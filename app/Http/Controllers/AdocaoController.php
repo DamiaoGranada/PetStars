@@ -80,7 +80,7 @@ class AdocaoController extends Controller
 
         return redirect('/admin/adocao');
     }
-    
+    sss
 
     public function display()
     {
