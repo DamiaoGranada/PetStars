@@ -10,6 +10,7 @@ use App\Http\Controllers\AdocaoController;
 use App\Http\Controllers\EventosController;
 use App\Http\Controllers\ApoiosController;
 use App\Http\Controllers\FqsController;
+use App\Http\Controllers\ContactosController;
 
 
 use App\Models\User;
@@ -50,6 +51,8 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth', 'verified']], function
     Route::resource('apoios',ApoiosController::class);
     Route::resource('categories',CategoryController::class);
     Route::resource('users',UserController::class);
+    Route::resource('contactos',ContactosController::class);
+
 });
 
 
