@@ -15,41 +15,10 @@ class FqsController extends Controller
     public function index(Request $request)
     {
         
-        if (count($request->all()) == 0) {
-            $faq = Faq::all();
-        } else {
-            $faq->filled('id');
-            $faq = Faq::query();
-            if ($request->filled('titulo')) {
-                $faq->where('titulo', 'like', '%' . $request->nome_animal . '%');
-            }
-            if ($request->filled('Conteudo1')) {
-                $faq->where('Conteudo', 'like', '%' . $request->descricao_animal . '%');
-            }
-            if ($request->filled('Conteudo2')) {
-                $faq->where('Conteudo', 'like', '%' . $request->descricao_animal . '%');
-            }
-            if ($request->filled('Conteudo3')) {
-                $faq->where('Conteudo', 'like', '%' . $request->descricao_animal . '%');
-            }
-            if ($request->filled('Conteudo4')) {
-                $faq->where('Conteudo', 'like', '%' . $request->descricao_animal . '%');
-            }
-            if ($request->filled('Conteudo5')) {
-                $faq->where('Conteudo', 'like', '%' . $request->descricao_animal . '%');
-            }
-            if ($request->filled('Conteudo6')) {
-                $faq->where('Conteudo', 'like', '%' . $request->descricao_animal . '%');
-            }
-            if ($request->filled('Conteudo7')) {
-                $faq->where('Conteudo', 'like', '%' . $request->descricao_animal . '%');
-            }
-            if ($request->filled('Conteudo8')) {
-                $faq->where('Conteudo', 'like', '%' . $request->descricao_animal . '%');
-            }
-            $faq=$faq->get();
-        }
-        return view('faq.list', compact('faq'));
+   
+            $faqs = Faq::all();
+        
+        return view('gm.faq', compact('faqs'));
 
     }
 
@@ -76,23 +45,13 @@ class FqsController extends Controller
         $faqs= new Faq();
         $faqs->id =$request->input('id');
         $faqs->titulo =$request->input('titulo');
-        $faqs->Conteudo =$request->input('Conteudo1');
-        $faqs->Conteudo =$request->input('Conteudo2');
-        $faqs->Conteudo =$request->input('Conteudo3');
-        $faqs->Conteudo =$request->input('Conteudo4');
-        $faqs->Conteudo =$request->input('Conteudo5');
-        $faqs->Conteudo =$request->input('Conteudo6');
-        $faqs->Conteudo =$request->input('Conteudo7');
-        $faqs->Conteudo =$request->input('Conteudo8');
-
-        $animal->save();
-        return view('faq')->with('faq',$animal);
+        $faqs->conteudo =$request->input('conteudo');
     }
 
     public function display()
     {
-        $faq = Faq::all();
-        return view('gm/faq')->with('faq',$faq)->with('menuOption', 'AJ');
+        $faqs = Faq::all();
+        return view('gm/faq')->with('faq',$faqs)->with('menuOption', 'AJ');
     }
 
     /**
