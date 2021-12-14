@@ -162,7 +162,7 @@
 
                                 <div class="col-xs-12 col-sm-12 col-md-12">
 			    					<div class="form-group">
-									<label for="password_confirmation" class="text-info">Password Confirmation:</label><br>
+									<label for="password_confirmation" class="">Password Confirmation:</label><br>
 			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm @error('password_confirmation') is-valid @enderror" >
                                        
 			    					</div>
@@ -188,7 +188,7 @@
 							</div>-->
 							<div class="Voltar" style="margin-left:46%;">
                                <br>
-							   <button onclick="window.location.href={{route('login')}}" class="btn btn-light">Voltar</button>
+							   <button onclick="window.location.href='login'" class="btn btn-light">Voltar</button>
                             </div>
 							</div>
 

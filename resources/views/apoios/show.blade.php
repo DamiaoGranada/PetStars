@@ -2,25 +2,22 @@
 @extends('layout.admin')
 
 @section('content')
+<div class="container-fluid">
 
+     <div class="card shadow mb-4">
+        <div class="card-header py-3">
+			Informação Apoios
+        </div>
+        <div class="card-body">
+		
+			<div>
+				<img alt="Post image" src="{{asset('fotos/apoios/'.$apoio->caminho_apoio)}}">
+			</div>
 
-<link href="bootstrap.min.css" rel="stylesheet">
-<script src="bootstrap.min.js"></script>
-<script src="jquery-3.5.1.min.js"></script>
-<div class="container">
-
-<div class="card-body">
- 	@if ($apoio->apoio_caminho)
- 	<div>
- 	<img alt="Post image" src="{{asset('storage/users_photos/'.$user->photo)}}">
- 	</div>
- 	@endif
- 	<div><strong>Apoio:</strong> {{$apoio->nome_apoio}} </div>
- 	<div><strong>Descrição do Apoio:</strong> {{$apoio->descri_apoio}} </div>
+			<div><strong>Apoio:</strong> {{$apoio->nome_apoio}} </div>
+			<div><strong>Descrição de Apoio:</strong> {{$apoio->descri_apoio}} </div>
+		</div>
+	</div>
 </div>
-
-</div>
-
-
-
 @endsection
+
