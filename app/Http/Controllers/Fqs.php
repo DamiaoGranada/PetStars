@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Foto;
-use App\Models\Animal;
-use App\Models\Pessoas_animal;
+use App\Models\Fqs;
+
 use Illuminate\Http\Request;
 
 class AdocaoController extends Controller
@@ -21,21 +20,18 @@ class AdocaoController extends Controller
     public function index(Request $request)
     {
         if (count($request->all()) == 0) {
-            $animals = Animal::all();
+            $fqs = Animal::all();
         } else {
-            $animals = Animal::query();
-            if ($request->filled('nome_animal')) {
-                $animals->where('nome_animal', 'like', '%' . $request->nome_animal . '%');
+            $fqs = Animal::query();
+            if ($request->filled('titulo')) {
+                $fqs->where('titulo', 'like', '%' . $request->nome_animal . '%');
             }
-            if ($request->filled('descricao_animal')) {
-                $animals->where('descricao_animal', 'like', '%' . $request->descricao_animal . '%');
+            if ($request->filled('Conteudo')) {
+                $fqs->where('Conteudo', 'like', '%' . $request->descricao_animal . '%');
             }
-            if ($request->filled('genero')) {
-                $animals->where('genero', $request->genero);
-            }
-            $animals=$animals->get();
+            $fqs=$fqs->get();
         }
-        return view('animais.list', compact('animals'));
+        return view('fqs.list', compact('fqs'));
 
     }
 
@@ -67,18 +63,9 @@ class AdocaoController extends Controller
         $animal->especie =$request->input('especie');
         $animal->genero =$request->input('genero');
         $animal->local_animal =$request->input('local_animal');
+
         $animal->save();
-
-        $foto = new Foto();
-        if ($request->hasFile('foto')) {
-            $photo_path = $request->file('foto')->store('public/animais_fotos');
-            $foto->caminho = basename($photo_path);
-            }
-       
-        $foto->id_animal = $animal->id;
-        $foto->save();
-
-        return redirect('/admin/adocao');
+        return view('animal')->with('animal',$animal);
     }
 
     public function display()

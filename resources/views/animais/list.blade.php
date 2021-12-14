@@ -99,7 +99,7 @@
 
 
 							  @else
- 								<img src="{{ asset($animal->foto->first()->caminho) }}" class="img-post" alt="animal photo">
+ 								<img src="{{ $animal->foto->count() > 0 ? asset('/storage/animais_fotos/' . $animal->foto->first()->caminho) : '/img/no-image.png' }}" class="img-post" alt="animal photo">
  							  @endif</td>
 							   <td>{{$animal->nome_animal}}</td>
  							   <td>{{$animal->descricao_animal}}</td>

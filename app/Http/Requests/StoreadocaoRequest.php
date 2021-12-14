@@ -31,7 +31,7 @@ class StoreadocaoRequest extends FormRequest
             "especie" => 'required|in:G,C',
             "genero" => 'required|in:F,M',
             "local_animal" => 'required|in:L,P',
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
+            'caminho' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
         ];
     }
 
