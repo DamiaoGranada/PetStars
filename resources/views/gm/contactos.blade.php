@@ -173,21 +173,27 @@
         <div class="espaco"></div>
 
 
-        <form>
-            <div class="form-group">
+        <form method="POST" action="{{route('contactos.store')}}" class="form-group" enctype="multipart/form-data">
+        @csrf
+        <div class="form-group">
+                <label class="p1" for="exampleFormControlInput1">Nome::</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="nome_comentario" placeholder="nome">
+         </div>
+
+         <div class="form-group">
                 <label class="p1" for="exampleFormControlInput1">Email:</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
-            </div>
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="email_comentario"  placeholder="nome@exemplo.com">
+         </div>
 
-            <div class="form-group">
+         <div class="form-group">
                 <label class="p1" for="exampleFormControlTextarea1">Comentario:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Deixe aqui o seu comentario"></textarea>
-            </div>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensagem" placeholder="Deixe aqui o seu comentario"></textarea>
+         </div>
 
-            <div class="form-group">
+         <div class="form-group">
                 <br>
-                <input type="submit" name="submit" class="btn btn-info btn-md" value="Enviar">
-            </div>
+                <input type="submit" name="submit" class="btn btn-info btn-md"  href="{{route('contactos.index')}}" value="Enviar">
+          </div>
         </form>
 
     </div>

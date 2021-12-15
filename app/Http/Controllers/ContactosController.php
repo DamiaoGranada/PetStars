@@ -19,11 +19,11 @@ class ContactosController extends Controller
             $contactos = Contactos::all();
         } else {
             $contactos = Apoios::query();
-            if ($request->filled('nome_mensagem')) {
-                $contactos->where('nome_mensagem', 'like', '%' . $request->nome_mensagem . '%');
+            if ($request->filled('nome_comentario')) {
+                $contactos->where('nome_comentario', 'like', '%' . $request->nome_comentario . '%');
             }
-            if ($request->filled('email_mensagem')) {
-                $contactos->where('email_mensagem', 'like', '%' . $request->email_mensagem . '%');
+            if ($request->filled('email_comentario')) {
+                $contactos->where('email_comentario', 'like', '%' . $request->email_comentario . '%');
             }
             if ($request->filled('mensagem')) {
                 $contactos->where('mensagem', 'like', '%' . $request->mensagem . '%');
@@ -53,7 +53,13 @@ class ContactosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contacto= new Contactos();
+        $contacto->nome_comentario =$request->input('nome_comentario');
+        $contacto->email_comentario =$request->input('email_comentario');
+        $contacto->mensagem =$request->input('mensagem');
+        $contacto->save();
+
+        return redirect('/contactos');
     }
 
     /**
@@ -66,6 +72,12 @@ class ContactosController extends Controller
     {
                 return view('contact.show',compact("contactos"));
 
+    }
+
+     public function display()
+    {
+        $contactos = Contactos::all();
+        return view('gm/contactos')->with('contactos',$contactos)->with('menuOption', 'AS');
     }
 
     /**

@@ -40,7 +40,7 @@ Route::get('/login', [PageController::class,'login'])->name('login');
 
 Route::get('/register', [PageController::class,'register'])->name('register');
 
-Route::get('/contactos', [PageController::class,'contactos'])->name('gm.contactos');
+Route::get('/contactos', [ContactosController::class,'display'])->name('gm.contactos');
 
 Route::group(['prefix'=>'admin', 'middleware' => ['auth', 'verified']], function () {
     Route::get('/', [App\Http\Controllers\HomeController::class,'index'])->name('admin');

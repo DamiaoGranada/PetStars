@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\app\\Models",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\animais",
+    "\\resources\\views\\animais\\partials",
+    "\\resources\\views\\contact",
+    "\\resources\\views\\gm"
+  ],
+  "SelectedNode": "\\app\\Http\\Controllers\\AdocaoController.php",
+  "PreviewInSolutionExplorer": false
+}
