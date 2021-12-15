@@ -11,6 +11,7 @@ use App\Http\Controllers\EventosController;
 use App\Http\Controllers\ApoiosController;
 use App\Http\Controllers\FqsController;
 use App\Http\Controllers\ContactosController;
+use App\Http\Controllers\HomeController;
 
 
 use App\Models\User;
@@ -54,6 +55,17 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth', 'verified']], function
     Route::resource('contactos',ContactosController::class);
 
 });
+
+Route::middleware(['admin', 'auth', 'verified'])->group(function () {
+    Route::get('/users/{user}/send_reactivate_mail', [UserController::class,'send_reactivate_email'])->name('users.sendActivationEmail');
+    Route::resource('users', UserController::class);
+    Route::resource('posts', PostController::class);
+    Route::resource('categories',CategoryController::class);
+    Route::get('/alterpass',[UserController::class,'editpass'])->name('users.editpass');
+    Route::post('/alterpass',[UserController::class,'updatepass'])->name('users.updatepass');
+    Route::get('/admin', [HomeController::class, 'index'])->name('admin');
+});
+
 
 
 Auth::routes(['verify'=> True]);
