@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Apoios;
 use App\Http\Requests\ApoiosRequest;
 use App\Http\Requests\UpdateApoiosRequest;
+use Illuminate\Support\Facades\Storage;
 
 
 use Illuminate\Http\Request;
@@ -63,18 +64,13 @@ class ApoiosController extends Controller
         $apoio->descri_apoio =$request->input('descri_apoio');
         $apoio->caminho_apoio =$request->input('caminho_apoio');
 
-       
-
-        
-        if ($request->hasFile('apoios')) {
-            $photo_path = $request->file('foto')->store('public/apoios_fotos');
-            $apoios->caminho_apoio = basename($photo_path);
+        if ($request->hasFile('caminho_apoio')) {
+            $photo_path = $request->file('caminho_apoio')->store('/public/apoios_fotos/');
+            $apoio->caminho_apoio = basename($photo_path);
             }
        
-            
          $apoio->save();
 
-        
         return view('apoios.add',compact('apoio'));
 
     }
@@ -119,16 +115,16 @@ class ApoiosController extends Controller
     public function update(UpdateApoiosRequest $request, Apoios $apoio)
     {
         $fields = $request->validated();
-            $apoio->fill($fields);
-                if ($request->hasFile('apoio_caminho')) {
-                    if (!empty($apoios->apoio_caminho)) {
-                        Storage::disk('public')->delete('fotos/apoios/' . $apoio->apoio_caminho);
-                    }
-            $photo_path = $request->file('apoio_caminho')->store('public/fotos/apoios/');
-            $apoio->photo = basename($photo_path);
-                }
-                $apoio->save();
-                return redirect()->route('apoios.index')->with('success', 'Atualização feita!');
+        $apoio->fill($fields);
+        if ($request->hasFile('caminho_apoio')) {
+            if (!empty($apoio->caminho_apoio)) {
+                Storage::disk('public')->delete('/public/apoios_fotos/' . $apoio->caminho_apoio);
+            }
+            $photo_path = $request->file('caminho_apoio')->store('/public/apoios_fotos/');
+            $apoio->caminho_apoio = basename($photo_path);
+        }
+        $apoio->save();
+        return redirect()->route('apoios.index')->with('success', 'Atualização feita!');
     }
 
 

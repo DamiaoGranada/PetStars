@@ -20,7 +20,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="cartao">
                     <div class="imgpatro_arcana">
-                    <img src="{{ $apoios->caminho_apoio->count() > 0 ? asset('/storage/apoios_fotos/' . $apoios->caminho_apoio->first()->caminho_apoio) : '/img/no-image.png' }}" class="img-post" alt="apoios photo">
+                    <img src="{{ asset('/storage/apoios_fotos/' . $apoio->caminho_apoio) }}" class="img-post" alt="apoios photo">
                     </div>
                     <div class="nomepatro">
                     {{ $apoio->nome_apoio }}
