@@ -94,9 +94,10 @@
       </li>
 
       <li class="nav-item">
+        
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnimais" aria-expanded="false"
           aria-controls="collapseAnimais">
-          <i class="fas fa-fw fa-folder"></i>
+          <i class="fas fa-cat"></i>
           <span>Animais</span>
         </a>
         <div id="collapseAnimais" class="collapse"  data-parent="#accordionSidebar">

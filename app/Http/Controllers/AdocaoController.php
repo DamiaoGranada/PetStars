@@ -105,9 +105,9 @@ class AdocaoController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Animal $post)
+    public function edit(Animal $animal)
     {
-        //
+        return view('animais.edit', compact('animal'));
     }
 
     /**
@@ -119,7 +119,7 @@ class AdocaoController extends Controller
      */
     public function update(Request $request, Animal $post)
     {
-        //
+        
     }
 
     /**
@@ -128,8 +128,9 @@ class AdocaoController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Animal $post)
+    public function destroy(Animal $animal)
     {
-        //
+        $animal->delete();
+        return redirect()->route('adocao.index')->with('success', 'Anuncio removido!');
     }
 }
