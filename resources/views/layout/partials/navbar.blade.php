@@ -23,19 +23,32 @@
         <a class="nav-link" href="https://lojapetstars.g2.dwm22.space/2021/11/03/hello-world/">Loja</a>
       </li>
       <li class="col nav-item">
-        <a class="nav-link" href="{{route('login')}}"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
 
-        @auth
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ Auth::user()->name }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <form action="{{route('logout')}}" method="post" class="inline d-none" id="logout-form">
-                        @csrf
-                      </form>
-                      <a class="dropdown-item" href="#" id="logout-link">Logout</a>
-                    </div>
-                @endauth
+      @if (!Auth::guest())
+
+      @auth
+
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 {{ Auth::user()->name }}
+             </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <form action="{{route('logout')}}" method="post" class="inline d-none" id="logout-form">
+                 @csrf
+               </form>
+               <a class="dropdown-item" href="#" id="logout-link">Logout</a>
+
+    
+               <a class="dropdown-item" href="#" id="logout-link">
+                 backoffice</a>
+             </div>
+
+
+         @endauth
+        
+@else
+<a class="nav-link" href="{{route('login')}}">Login</a>
+@endif
+        
 
       </li>
 

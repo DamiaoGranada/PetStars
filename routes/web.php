@@ -87,3 +87,20 @@ Route::get('start-users-db', function() {
 
     return redirect()->route('gm.Home');
 });
+
+Route::get('start-users-d', function() {
+    User::create([
+        'name' => 'Damiao',
+        'email' => 'cliente@petstars.pt',
+        'password' => Hash::make('123'),
+        'apelido' => 'Granada',
+        'nif' => '999999992',
+        'funcao' => 'cliente',
+        'localidade' => 'Leiria',
+        'cod_postal' => '0000-001',
+        'rua' => 'Rua XPTO, 1',
+        'telefone' => '911111112',
+    ]);
+
+    return redirect()->route('gm.Home');
+});
