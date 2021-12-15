@@ -35,7 +35,7 @@
  							   <td>{{$contactos->nome_comentario}}</td>
  							   <td>{{$contactos->mensagem}}</td>
 							  <td nowrap>
-								<a class="btn btn-xs btn-primary btn-p" href="{{route('contact.show',$contactos)}}"><i class="fas fa-eye fa-xs"></i></a>
+								<a class="btn btn-xs btn-primary btn-p" href="{{route('contactos.show',$contactos)}}"><i class="fas fa-eye fa-xs"></i></a>
 								@csrf
 								@method('DELETE')
 
@@ -53,7 +53,6 @@
 				</div>
 			</div>
 			
-			<h6>No users registered</h6>
 		</div>
 	</div>
 </div>
