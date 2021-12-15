@@ -11,7 +11,7 @@
         <div class="card-body">
 		
 			<div>
-				<img alt="Post image" src="{{asset('fotos/apoios/'.$apoio->caminho_apoio)}}">
+			<img src="{{ asset('/storage/apoios_fotos/' . $apoio->caminho_apoio) }}" class="img-post" alt="apoios photo">
 			</div>
 
 			<div><strong>Apoio:</strong> {{$apoio->nome_apoio}} </div>
