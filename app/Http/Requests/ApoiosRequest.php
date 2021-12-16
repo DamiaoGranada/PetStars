@@ -25,7 +25,7 @@ class ApoiosRequest extends FormRequest
     {
         return [
             "nome_apoio" => 'required|min:3|max:40|regex:/^[A-ZÀ-úa-z\s]+$/',
-            "descri_apoio" => 'required|min:3|max:200|regex:/^[A-ZÀ-úa-z\s]+$/',
+            "descri_apoio" => 'required|min:3|max:200|regex:/^[A-ZÀ-úa-z,.\s]+$/',
             "caminho_apoio" => 'required|image|mimes:jpeg,png,jpg,gif',
         ];
     }
