@@ -40,7 +40,7 @@
                @if(Auth::check() && Auth::user()->funcao == "admin")
 
                <a class="dropdown-item" href="{{route('admin')}}" id="logout-link">
-                 backoffice</a>
+                 Backoffice</a>
              </div>
 
 
