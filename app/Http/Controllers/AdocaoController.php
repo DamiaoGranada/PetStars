@@ -128,9 +128,12 @@ class AdocaoController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Animal $animal)
+    public function destroy(Animal $adocao)
     {
-        $animal->delete();
+        Foto::where('id_animal', $adocao->id)->delete();
+        $adocao->foto()->delete();
+        //apagar na storage
+        $adocao->delete();
         return redirect()->route('adocao.index')->with('success', 'Anuncio removido!');
     }
 }
