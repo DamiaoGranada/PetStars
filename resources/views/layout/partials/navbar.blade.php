@@ -36,18 +36,18 @@
                  @csrf
                </form>
                <a class="dropdown-item" href="#" id="logout-link">Logout</a>
+               <a class="dropdown-item" href="{{route('admin')}}" id="logout-link">
+                 backoffice</a>
 
-               @if(Auth::check() && Auth::user()->funcao == "admin")
+                 {{--  @if(Auth::check() && Auth::user()->funcao == "admin")
 
                <a class="dropdown-item" href="{{route('admin')}}" id="logout-link">
                  backoffice</a>
              </div>
 
 
-@endif
+         @endif     --}}
  
-
-
          @endauth
         
 @else

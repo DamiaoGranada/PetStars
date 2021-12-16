@@ -9,11 +9,11 @@
 	<div class="row  d-flex align-items-center justify-content-center">
 		<div class="col-md-12 text-center">
 			<h1 class="big-text">Oops!</h1>
-			<h2 class="small-text">404 - PAGE NOT FOUND</h2>
+			<h2 class="small-text">403 - FORBIDEN</h2>
 
 		</div>
 		<div class="col-md-6  text-center">
-			<p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
+			<p>You dont have permission the enter this page.</p>
 
 
 			<form class="example" action="action_page.php">
