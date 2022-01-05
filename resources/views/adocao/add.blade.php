@@ -13,7 +13,7 @@
 
 		<form method="POST" action="{{route('adocao.store')}}" class="form-group" enctype="multipart/form-data">
 			@csrf
-			@include('animais.partials.add-edit')
+			@include('adocao.partials.add-edit')
 
 			<div class="form-group">
 				<button type="submit" class="btn btn-success" name="ok">Save</button>

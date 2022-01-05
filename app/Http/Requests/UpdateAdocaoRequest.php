@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreadocaoRequest extends FormRequest
+class UpdateAdocaoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -34,11 +34,7 @@ class StoreadocaoRequest extends FormRequest
             "foto" => 'image|mimes:jpeg,png,jpg,gif',
         ];
     }
-
-    public function messages()
-    {
-        return [
-            'name.regex' => 'Name should contain only letters and spaces'
-        ];
-    }
 }
+
+
+

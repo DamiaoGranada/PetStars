@@ -91,28 +91,28 @@
 							</tr>
 						  </thead>
 						  <tbody>
-						  @foreach($animals as $animal)
+						  @foreach($animals as $adocao)
 							<tr>
 							  <td>
-							  @if ($animal->photo)
+							  @if ($adocao->photo)
 
 
 
 							  @else
- 								<img src="{{ $animal->foto->count() > 0 ? asset('/storage/animais_fotos/' . $animal->foto->first()->caminho) : '/img/no-image.png' }}" class="img-post" alt="animal photo">
+ 								<img src="{{ $adocao->foto->count() > 0 ? asset('/storage/animais_fotos/' . $adocao->foto->first()->caminho) : '/img/no-image.png' }}" class="img-post" alt="adocao photo">
  							  @endif</td>
-							   <td>{{$animal->nome_animal}}</td>
- 							   <td>{{$animal->descricao_animal}}</td>
-                                <td>{{$animal->data_acolhimento}}</td>
-                                <td>{{$animal->idade_animal}}</td>
-                                <td>{{$animal->especie}}</td>
- 							   <td>{{$animal->genero}}</td>
-                                <td>{{$animal->local_animal}}</td>
+							   <td>{{$adocao->nome_animal}}</td>
+ 							   <td>{{$adocao->descricao_animal}}</td>
+                                <td>{{$adocao->data_acolhimento}}</td>
+                                <td>{{$adocao->idade_animal}}</td>
+                                <td>{{$adocao->especie}}</td>
+ 							   <td>{{$adocao->genero}}</td>
+                                <td>{{$adocao->local_animal}}</td>
 
 							  <td nowrap>
-								<a class="btn btn-xs btn-primary btn-p" href="{{route('adocao.show',$animal)}}"><i class="fas fa-eye fa-xs"></i></a>
-							  <a class="btn btn-xs btn-warning btn-p" href="{{route('adocao.edit',$animal)}}"><i class="fas fa-pen fa-xs"></i></a>
-								<form method="POST" action="{{route('adocao.destroy',$animal)}}" role="form" class="inline"
+								<a class="btn btn-xs btn-primary btn-p" href="{{route('adocao.show',$adocao)}}"><i class="fas fa-eye fa-xs"></i></a>
+							  <a class="btn btn-xs btn-warning btn-p" href="{{route('adocao.edit',$adocao)}}"><i class="fas fa-pen fa-xs"></i></a>
+								<form method="POST" action="{{route('adocao.destroy',$adocao)}}" role="form" class="inline"
 								onsubmit="return confirm('Are you sure you want to delete this record?');">
 								@csrf
 								@method('DELETE')

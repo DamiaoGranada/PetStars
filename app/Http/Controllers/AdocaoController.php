@@ -6,6 +6,8 @@ use App\Models\Foto;
 use App\Models\Animal;
 use App\Models\Pessoas_animal;
 use Illuminate\Http\Request;
+use App\Http\Requests\UpdateAdocaoRequest;
+use Illuminate\Support\Facades\Storage;
 
 class AdocaoController extends Controller
 {
@@ -35,7 +37,7 @@ class AdocaoController extends Controller
             }
             $animals=$animals->get();
         }
-        return view('animais.list', compact('animals'));
+        return view('adocao.list', compact('animals'));
 
     }
 
@@ -47,8 +49,8 @@ class AdocaoController extends Controller
      */
     public function create()
     {
-        $animal = new animal;
-        return view('animais.add', compact('animal'));
+        $adocao = new animal;
+        return view('adocao.add', compact('adocao'));
     }
 
     /**
@@ -59,15 +61,15 @@ class AdocaoController extends Controller
      */
     public function store(Request $request)
     {
-        $animal= new Animal();
-        $animal->nome_animal =$request->input('nome_animal');
-        $animal->descricao_animal =$request->input('descricao_animal');
-        $animal->data_acolhimento =$request->input('data_acolhimento');
-        $animal->idade_animal =$request->input('idade_animal');
-        $animal->especie =$request->input('especie');
-        $animal->genero =$request->input('genero');
-        $animal->local_animal =$request->input('local_animal');
-        $animal->save();
+        $adocao= new Animal();
+        $adocao->nome_animal =$request->input('nome_animal');
+        $adocao->descricao_animal =$request->input('descricao_animal');
+        $adocao->data_acolhimento =$request->input('data_acolhimento');
+        $adocao->idade_animal =$request->input('idade_animal');
+        $adocao->especie =$request->input('especie');
+        $adocao->genero =$request->input('genero');
+        $adocao->local_animal =$request->input('local_animal');
+        $adocao->save();
 
         $foto = new Foto();
         if ($request->hasFile('foto')) {
@@ -75,7 +77,7 @@ class AdocaoController extends Controller
             $foto->caminho = basename($photo_path);
             }
        
-        $foto->id_animal = $animal->id;
+        $foto->id_animal = $adocao->id;
         $foto->save();
 
         return redirect('/admin/adocao');
@@ -91,41 +93,57 @@ class AdocaoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Animal $adocao
      * @return \Illuminate\Http\Response
      */
-    public function show(Animal $post)
+    public function show(Animal $adocao)
     {
-        //
+        return view('adocao.show',compact("adocao"));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Animal $adocao
      * @return \Illuminate\Http\Response
      */
-    public function edit(Animal $animal)
+    public function edit(Animal $adocao)
     {
-        return view('animais.edit', compact('animal'));
+        return view('adocao.edit', compact('adocao'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Animal $adocao
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Animal $post)
+    public function update(UpdateAdocaoRequest $request, Animal $adocao)
     {
-        
+        $fields = $request->validated();
+        $adocao->fill($fields);
+        $foto = new Foto;
+        if ($request->hasFile('foto')) {
+            $foto = Foto::where('id_animal', $adocao->id)->first();
+            if( $foto->count() ) {
+                Storage::disk('public')->delete('animais_fotos/' . $foto->caminho);
+            }
+            $photo_path = $request->file('foto')->store('/public/animais_fotos/');
+            $foto->caminho = basename($photo_path);
+            $foto->id_animal = $adocao->id;
+            $foto->save();
+        }
+        $adocao->save();
+        return redirect()->route('adocao.index')->with('success', 'Atualização feita!');
     }
+                
+    
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Animal  $adocao
      * @return \Illuminate\Http\Response
      */
     public function destroy(Animal $adocao)

@@ -10,20 +10,19 @@
 		</div>
 		<div class="card-body">
 
-			<form method="POST" action="{{route('adocao.update',$animal)}}" class="form-group" enctype="multipart/form-data">
+			<form method="POST" action="{{route('adocao.update',$adocao)}}" class="form-group" enctype="multipart/form-data">
 				@csrf
 				@method("PUT")
-				@include('animais.partials.add-edit')
+				@include('adocao.partials.add-edit')
 				<div class="form-group">
 					<button type="submit" class="btn btn-success" name="ok">Save</button>
 
-					<a href="#" class="btn btn-default">Cancel</a>
+					<a href="{{route('adocao.index')}}" class="btn btn-default">Cancel</a>
 
 				</div>
 
 			</form>
 
-			
 		</div>
 	</div>
 </div>
