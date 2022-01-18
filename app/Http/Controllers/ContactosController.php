@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Contactos;
-use App\Http\Controllers\Controller;
+use App\Http\Requests\ContactosRequest;
+use App\Http\Requests\UpdateContactosRequest;
+use Illuminate\Support\Facades\Storage;
+
+
 use Illuminate\Http\Request;
 
 class ContactosController extends Controller
@@ -62,33 +65,36 @@ class ContactosController extends Controller
         return redirect('/contactos');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Contactos  $contactos
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Contactos $contactos)
-    {
-                return view('contact.show',compact("contactos"));
-
-    }
+   
 
      public function display()
     {
         $contactos = Contactos::all();
         return view('gm/contactos')->with('contactos',$contactos)->with('menuOption', 'AS');
+    }    
+
+     /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Contactos  $contacto
+     * @return \Illuminate\Http\Response
+     */
+
+    public function show(Contactos $contacto)
+    {
+                return view('contact.show',compact("contacto"));
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Contactos  $contactos
+     * @param  \App\Models\Contactos  $contacto
      * @return \Illuminate\Http\Response
      */
-    public function edit(Contactos $contactos)
+    public function edit(Contactos $contacto)
     {
-               return view('contact.edit', compact('contactos'));
+               return view('contact.edit', compact('contacto'));
 
     }
 
@@ -99,19 +105,23 @@ class ContactosController extends Controller
      * @param  \App\Models\Contactos  $contactos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Contactos $contactos)
+    public function update(Request $request, Contactos $contacto)
     {
-        //
+        $fields = $request->validated();
+        $contacto->fill($fields);
+        $contacto->save();
+        return redirect()->route('contactos.index')->with('success', 'Atualização feita!');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Contactos  $contactos
+     * @param  \App\Models\Contactos  $contacto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contactos $contactos)
+    public function destroy(Contactos $contacto)
     {
-        //
+        $contacto->delete();
+        return redirect()->route('contactos.index')->with('success', 'Mensagem removida!');
     }
 }

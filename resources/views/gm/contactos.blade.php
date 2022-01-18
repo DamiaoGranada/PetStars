@@ -190,6 +190,10 @@
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensagem" placeholder="Deixe aqui o seu comentario"></textarea>
          </div>
 
+         <p id="p2">
+                    *É necessario fazer login para realizar um comentario.
+        </p>
+
          <div class="form-group">
                 <br>
                 <input type="submit" name="submit" class="btn btn-info btn-md"  href="{{route('contactos.index')}}" value="Enviar">

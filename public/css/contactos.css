@@ -93,6 +93,14 @@ h1{
     text-align: justify;
     text-justify: inter-word;
 }
+#p2 {
+    
+    color: red;
+    font-size: 18px;
+    text-align: justify;
+    text-justify: inter-word;
+    
+}
 
 ul{
     font-size:21px;
