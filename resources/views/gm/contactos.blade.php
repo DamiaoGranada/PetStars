@@ -9,7 +9,9 @@
 
         <div class="espaco"></div>
 
-        <img src="fotos/contactos/cao1.jpg" alt="img" class="img1">
+        <video class="img1" controls>
+            <source src="fotos/video.mp4" type="video/mp4">       
+        </video>
 
         <div class="espaco"></div>
 
