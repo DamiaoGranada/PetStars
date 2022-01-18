@@ -4,14 +4,21 @@
 @section('content')
 
 
-<div class="container">
+<div class="container-fluid">
 
-<div class="card-body">
+<div class="card shadow mb-4">
+        <div class="card-header py-3">
+			Informação Comentarios
+        </div>
+		<div class="card-body">
+        
 
- 	<div><strong>nome_mensagem:</strong> {{$contactos->nome_mensagem}} </div>
- 	<div><strong>email_mensagem:</strong> {{$contactos->email_mensagem}} </div>
+ 		<div><strong>Nome:</strong> {{$contacto->nome_comentario}} </div>
+ 		<div><strong>Email:</strong> {{$contacto->email_comentario}} </div>
+		 <div><strong>Comentario:</strong> {{$contacto->mensagem}} </div>
+
 </div>
-
+</div>
 </div>
 
 

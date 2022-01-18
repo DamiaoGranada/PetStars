@@ -9,7 +9,9 @@
 
         <div class="espaco"></div>
 
-        <img src="fotos/contactos/cao1.jpg" alt="img" class="img1">
+        <video class="img1" controls>
+            <source src="fotos/video.mp4" type="video/mp4">       
+        </video>
 
         <div class="espaco"></div>
 
@@ -189,6 +191,10 @@
                 <label class="p1" for="exampleFormControlTextarea1">Comentario:</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensagem" placeholder="Deixe aqui o seu comentario"></textarea>
          </div>
+
+         <p id="p2">
+                    *É necessario fazer login para realizar um comentario.
+        </p>
 
          <div class="form-group">
                 <br>
