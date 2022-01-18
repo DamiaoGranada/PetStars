@@ -9,7 +9,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AdocaoController;
 use App\Http\Controllers\EventosController;
 use App\Http\Controllers\ApoiosController;
-use App\Http\Controllers\FqsController;
+use App\Http\Controllers\FaqsControllers;
 use App\Http\Controllers\ContactosController;
 use App\Http\Controllers\HomeController;
 
@@ -34,7 +34,7 @@ Route::get('/apoios', [ApoiosController::class,'display'])->name('gm.apoios');
 
 Route::get('/adocao', [AdocaoController::class,'display'])->name('gm.adocao');
 
-Route::get('/faq', [FqsController::class,'display'])->name('gm.faq');
+Route::get('/faq', [FaqsControllers::class,'display'])->name('gm.faq');
 
 Route::get('/login', [PageController::class,'login'])->name('login');
 
@@ -53,7 +53,7 @@ Route::group(['prefix'=>'admin', 'middleware' => ['auth', 'verified']], function
     Route::resource('categories',CategoryController::class);
     Route::resource('users',UserController::class);
     Route::resource('contactos',ContactosController::class);
-
+    Route::resource('faq',FaqsControllers::class);
 });
 
 Route::middleware(['admin', 'auth', 'verified'])->group(function () {

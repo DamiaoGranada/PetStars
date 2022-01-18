@@ -157,7 +157,7 @@
         <div id="collapseFaqs" class="collapse"  data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Categorias:</h6>
-            <a class="collapse-item" href="{{route('contactos.index')}}">Lista de Mensagem</a>
+            <a class="collapse-item" href="{{route('faq.index')}}">Lista de Mensagem</a>
 
       
       

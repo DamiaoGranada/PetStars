@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faq;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\FaqsCategoryRequest;
 
-class FqsController extends Controller
+class FaqsControllers extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +16,22 @@ class FqsController extends Controller
      */
     public function index(Request $request)
     {
-        
-   
-            $faqs = Faq::all();
-        
-        return view('gm.faq', compact('faqs'));
+        if (count($request->all()) == 0) {
+            $faq = Faq::all();
+        } else {
+            $faq = Faq::query();
+            if ($request->filled('titulo')) {
+                $faq->where('titulo', 'like', '%' . $request->titulo . '%');
+            }
+            if ($request->filled('conteudo')) {
+                $faq->where('conteudo', 'like', '%' . $request->conteudo . '%');
+            }
+            
 
+            $faq->save();
+            
+        }
+        return view('faqs.list', compact('faq'));
     }
 
 
@@ -31,7 +43,7 @@ class FqsController extends Controller
     public function create()
     {
         $faqs = new Faq;
-        return view('faq.add', compact('faq'));
+        return view('faqs.add', compact('faqs'));
     }
 
     /**
@@ -54,7 +66,7 @@ class FqsController extends Controller
     public function display()
     {
         $faqs = Faq::all();
-        return view('gm/faq')->with('faq',$faqs)->with('menuOption', 'AJ');
+        return view('gm/faq')->with('faq',$faqs)->with('menuOption', 'JJ');
     }
 
     /**
@@ -63,9 +75,9 @@ class FqsController extends Controller
      * @param  \App\Models\  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Faq $post)
+    public function show(Faq $faqs)
     {
-        //
+        return view('faqs.show',compact("faqs"));
     }
 
     /**
@@ -74,9 +86,9 @@ class FqsController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Faq $post)
+    public function edit(Faq $faq)
     {
-        //
+        return view('faqs.edit', compact('faq'));
     }
 
     /**
@@ -86,9 +98,12 @@ class FqsController extends Controller
      * @param  \App\Models\Faq  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Faq $post)
+    public function update(FaqsCategoryRequest $request, Faq $faqs)
     {
-        //
+        $fields = $request->validated();
+        $faqs->fill($fields);
+        $faqs->save();
+        return redirect()->route('faq.index')->with('success', 'Atualização feita!');
     }
 
     /**
@@ -97,8 +112,9 @@ class FqsController extends Controller
      * @param  \App\Models\Faq  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Faq $post)
+    public function destroy(Faq $faqs)
     {
-        //
+        $faqs->delete();
+        return redirect()->route('faq.index')->with('success', 'Mensagem removida!');
     }
 }
