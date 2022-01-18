@@ -13,7 +13,7 @@
 
   <!-- Custom fonts for this template -->
   <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel=" stylesheet" type="text/css">
-  
+
   <link
     href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
     rel="stylesheet">
@@ -38,7 +38,7 @@
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
         <div class="sidebar-brand-icon rotate-n-15">
-          
+
 
         </div>
         <div class="sidebar-brand-text mx-3">PetStars</div>
@@ -72,7 +72,7 @@
             <a class="collapse-item" href="{{route('users.create')}}">Add User</a>
           </div>
         </div>
-     
+
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePosts" aria-expanded="true"
@@ -94,7 +94,7 @@
       </li>
 
       <li class="nav-item">
-        
+
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnimais" aria-expanded="false"
           aria-controls="collapseAnimais">
           <i class="fas fa-cat"></i>
@@ -105,7 +105,7 @@
             <h6 class="collapse-header">Categories:</h6>
             <a class="collapse-item" href="{{route('adocao.index')}}">List Animals</a>
             <a class="collapse-item" href="{{route('adocao.create')}}">Add Animals</a>
-            
+
           </div>
         </div>
       </li>
@@ -122,13 +122,13 @@
             <a class="collapse-item" href="{{route('apoios.index')}}">Lista de Apoios</a>
 
             <a class="collapse-item" href="{{route('apoios.create')}}">Adicionar Apoios</a>
-            
+
           </div>
-          
+
         </div>
       </li>
 
-    
+
 
       <!-- Zona de Contactos-->
       <li class="nav-item">
@@ -142,15 +142,34 @@
             <h6 class="collapse-header">Categorias:</h6>
             <a class="collapse-item" href="{{route('contactos.index')}}">Lista de Mensagem</a>
 
-            
+
           </div>
-          
+
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFaqs" aria-expanded="false"
+          aria-controls="collapseFaqs">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Faqs</span>
+        </a>
+        <div id="collapseFaqs" class="collapse"  data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorias:</h6>
+            <a class="collapse-item" href="{{route('contactos.index')}}">Lista de Mensagem</a>
+
+
+          </div>
+
         </div>
       </li>
 
 
-      
-      
+
+
+
+
 
 
       <!-- Divider -->
