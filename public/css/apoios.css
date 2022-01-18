@@ -54,4 +54,12 @@ h1{
     text-align: center;
 }
 
+/*
+.imgpatro_arcana .img-post{
+    filter: grayscale(90%);
+    -webkit-filter: grayscale(90%);
+}
 
+.imgpatro_arcana .img-post:hover{
+    filter: grayscale(0%);
+}*/
