@@ -11,13 +11,13 @@
         </div>
         <div class="card-body">
 		
-		<form method="POST" action="{{route('apoios.store')}}" class="form-group" enctype="multipart/form-data">
+		<form method="POST" action="{{route('contactos.store')}}" class="form-group" enctype="multipart/form-data">
 			@csrf
-			@include('apoios.partials.add-edit')
+			@include('contactos.partials.add-edit')
 
 			<div class="form-group">
 				<button type="submit" class="btn btn-success" name="ok">Adicionar</button>
-				<a href="{{route('apoios.index')}}" class="btn btn-default">Cancelar</a>
+				<a href="{{route('contactos.index')}}" class="btn btn-default">Cancelar</a>
 			</div>
 		</form>
 		</div>

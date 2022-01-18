@@ -147,10 +147,26 @@
           
         </div>
       </li>
+	  
+	     <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFaqs" aria-expanded="false"
+          aria-controls="collapseFaqs">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Faqs</span>
+        </a>
+        <div id="collapseFaqs" class="collapse"  data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorias:</h6>
+            <a class="collapse-item" href="{{route('contactos.index')}}">Lista de Mensagem</a>
 
       
       
 
+
+          </div>
+
+        </div>
+      </li>
 
       
       
