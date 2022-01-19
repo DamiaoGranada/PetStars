@@ -42,7 +42,7 @@ class FaqsControllers extends Controller
      */
     public function create()
     {
-        $faqs = new Faq;
+        $faq = new Faq;
         return view('faqs.add', compact('faqs'));
     }
 
@@ -54,19 +54,19 @@ class FaqsControllers extends Controller
      */
     public function store(Request $request)
     {
-        $faqs= new Faq();
-        $faqs->id =$request->input('id');
-        $faqs->titulo =$request->input('titulo');
-        $faqs->Conteudo =$request->input('conteudo');
+        $faq= new Faq();
+        $faq->id =$request->input('id');
+        $faq->titulo =$request->input('titulo');
+        $faq->Conteudo =$request->input('conteudo');
 
         $faqs->save();
-        return view('faq')->with('faq',$faqs);
+        return view('faq')->with('faq',$faq);
     }
 
     public function display()
     {
-        $faqs = Faq::all();
-        return view('gm/faq')->with('faq',$faqs)->with('menuOption', 'JJ');
+        $faq= Faq::all();
+        return view('gm/faq')->with('faq',$faq)->with('menuOption', 'JJ');
     }
 
     /**
@@ -75,9 +75,9 @@ class FaqsControllers extends Controller
      * @param  \App\Models\  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Faq $faqs)
+    public function show(Faq $faq)
     {
-        return view('faqs.show',compact("faqs"));
+        return view('faqs.show',compact("faq"));
     }
 
     /**
@@ -98,11 +98,11 @@ class FaqsControllers extends Controller
      * @param  \App\Models\Faq  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(FaqsCategoryRequest $request, Faq $faqs)
+    public function update(FaqsCategoryRequest $request, Faq $faq)
     {
         $fields = $request->validated();
-        $faqs->fill($fields);
-        $faqs->save();
+        $faq->fill($fields);
+        $faq->save();
         return redirect()->route('faq.index')->with('success', 'Atualização feita!');
     }
 
@@ -112,9 +112,9 @@ class FaqsControllers extends Controller
      * @param  \App\Models\Faq  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Faq $faqs)
+    public function destroy(Faq $faq)
     {
-        $faqs->delete();
+        $faq->delete();
         return redirect()->route('faq.index')->with('success', 'Mensagem removida!');
     }
 }

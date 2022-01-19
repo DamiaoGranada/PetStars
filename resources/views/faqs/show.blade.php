@@ -12,8 +12,8 @@
         </div>
 		<div class="card-body">
 
- 		<div><strong>Titulo:</strong>{{$faqs->titulo}}</div>
- 		<div><strong>Conteudo:</strong>{{$faqs->conteudo}}</div>
+ 		<div><strong>Titulo:</strong>{{$faq->titulo}}</div>
+ 		<div><strong>Conteudo:</strong>{{$faq->conteudo}}</div>
 </div>
 </div>
 </div>
