@@ -31,8 +31,7 @@ Home
         <div class="  col-4 text-center">
 
         <img  class="border border-dark imagens rounded-circle align-middle" src="fotos/cat.jpg" alt="">
-
-        <p class=" texto ">ja foram adotados</p>
+       
 
         <h3 class=" title3 ">36 Gatos</h3>
 
@@ -43,8 +42,7 @@ Home
         <div class="  col-4 text-center">
 
         <img  class="border border-dark imagens rounded-circle align-middle" src="fotos/cao.jpg" alt="">
-        
-        <p  class=" texto ">ja foram adotados</p>
+           
 
         <h3 class=" title3 ">24 Cães</h3>
   
@@ -57,7 +55,6 @@ Home
 
         <img  class="border border-dark imagens rounded-circle align-middle" src="fotos/bird.jpg" alt="">
         
-        <p class=" texto ">ja foram adotados</p>
 
         <h3 class=" title3 ">20 Aves</h3>
 
