@@ -11,7 +11,7 @@ Home
 <div class="position-relative" >
 <img id="banner" src="../fotos/Banner.png" alt="">
 
-<h1 id="title" class=" position-absolute rounded-pill" > ELES PRECISÃO DE TI</h1>
+<h1 id="title" class=" position-absolute rounded-pill" > ELES PRECISAM DE TI</h1>
 </div>
 
 <div class="vazio"></div>
@@ -120,14 +120,7 @@ Home
   </div>
   @endforeach
 
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+ 
 </div>
 
 </div>

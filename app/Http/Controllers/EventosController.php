@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Foto;
 use App\Models\Eventos;
-
+use App\Http\Requests\EventosRequest;
+use App\Http\Requests\UpdateEventosRequest;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class EventosController extends Controller
