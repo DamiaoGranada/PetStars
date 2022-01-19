@@ -21,6 +21,16 @@
             @yield('title')
 
             </title>
+
+
+            <script type="text/javascript">
+			function abrir(){
+				document.getElementById('popup').style.display = 'block';
+			}
+			function fechar(){
+				document.getElementById('popup').style.display =  'none';
+			}
+		</script>
     </head>
 
 <!--NAVBAR-->

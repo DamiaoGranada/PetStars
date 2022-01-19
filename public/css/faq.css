@@ -64,6 +64,8 @@
     transition: 0.6s;
 }
 
+
+
 @media (min-width: 1280px) {
     .faq .container {
         padding: 0 120px;
