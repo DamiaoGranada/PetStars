@@ -36,7 +36,6 @@
  							   <td>{{$contactos->mensagem}}</td>
 							  <td nowrap>
 								<a class="btn btn-xs btn-primary btn-p" href="{{route('contactos.show',$contactos)}}"><i class="fas fa-eye fa-xs"></i></a>
-								<a class="btn btn-xs btn-warning btn-p" href="{{route('contactos.edit',$contactos)}}"><i class="fas fa-pen fa-xs"></i></a>
 								<form method="POST" action="{{route('contactos.destroy',$contactos)}}" role="form" class="inline"
 								onsubmit="return confirm('Tem a certeza que pretende remover este comentario ?');">
 								@csrf
