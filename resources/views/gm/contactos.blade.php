@@ -99,7 +99,7 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="equipa2">
-                        <img src="fotos/contactos/joao.jpg" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/joao.png" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Joao Domingos
