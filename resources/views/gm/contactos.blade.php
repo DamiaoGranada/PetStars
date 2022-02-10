@@ -112,7 +112,7 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="equipa3">
-                        <img src="fotos/contactos/mario.png" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/mario.jpg" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Mario Jorge
