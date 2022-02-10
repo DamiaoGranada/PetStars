@@ -16,7 +16,7 @@ class FqsController extends Controller
     {
         
    
-            $faqs = Faq::all();
+            $faq = Faq::all();
         
         return view('gm.faq', compact('faqs'));
 
@@ -45,7 +45,7 @@ class FqsController extends Controller
         $faqs= new Faq();
         $faqs->id =$request->input('id');
         $faqs->titulo =$request->input('titulo');
-        $faqs->Conteudo =$request->input('conteudo');
+        $faqs->conteudo =$request->input('conteudo');
 
         $faqs->save();
         return view('faq')->with('faq',$faqs);
