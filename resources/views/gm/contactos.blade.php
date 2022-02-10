@@ -86,7 +86,7 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="equipa1">
-                        <img src="fotos/contactos/rat.jpg" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/diogo.jpg" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Diogo Ferreira
@@ -99,7 +99,7 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="equipa2">
-                        <img src="fotos/contactos/cao.jpg" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/joao.jpg" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Joao Domingos
@@ -112,7 +112,7 @@
             <div class="col-md-4">
                 <div class="cartao">
                     <div class="equipa3">
-                        <img src="fotos/contactos/peixe.png" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/mario.png" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Mario Jorge
@@ -125,7 +125,7 @@
             <div class="col-sm-4 offset-sm-2">
                 <div class="cartao">
                     <div class="equipa4">
-                        <img src="fotos/contactos/cat.jpg" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/cata.jpg" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Catarina Veloso
