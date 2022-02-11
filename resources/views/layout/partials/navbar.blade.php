@@ -14,7 +14,7 @@
         <a class="nav-link" href="{{route('gm.adocao')}}">Adoção</a>
       </li>
       <li class="col nav-item @if ($menuOption=='D') active @endif">
-        <a class="nav-link" href="{{route('gm.faq')}}">Faqs</a>
+        <a class="nav-link" href="{{route('gm.faq')}}">F.A.Q.s</a>
       </li>
       <li class="col nav-item @if ($menuOption=='C') active @endif">
         <a class="nav-link" href="{{route('gm.apoios')}}">Apoios</a>

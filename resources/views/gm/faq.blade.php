@@ -6,14 +6,20 @@
 <body>
 <link rel="stylesheet" href="{{asset('css/faq.css')}}">
 
+<!-- ======= BANNER ======= -->
+
+<div class="position-relative" >
+<img id="banner" src="{{ asset('fotos/header-faq.jpg') }}" alt="">
+
+<h1 id="title" class=" position-absolute rounded-pill" > Perguntas Frequentes</h1>
+</div>
+<!-- ======= END BANNER ======= -->
+
  <!-- ======= F.A.Q ======= -->
  <section id="faq" class="faq">
         <div class="container">
 
-            <div class="section-title">
-                <h2>Perguntas Frequentes</h2>
-                <br>
-            </div>
+            
             @foreach( $faq as $faqs )
             <ul class="faq-list">
 
