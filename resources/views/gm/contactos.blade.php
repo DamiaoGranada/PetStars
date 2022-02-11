@@ -138,7 +138,7 @@
             <div class="col-sm-6">
                 <div class="cartao">
                     <div class="equipa5">
-                        <img src="fotos/contactos/lagarto.jpg" alt="imgpessoa" id="imgcara">
+                        <img src="fotos/contactos/damiao.png" alt="imgpessoa" id="imgcara">
                     </div>
                     <div class="nome">
                         Damiao Granada
